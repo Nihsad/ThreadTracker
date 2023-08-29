@@ -73,6 +73,13 @@
 	--dkAccent: rgb(118,186,207);
 }
 
+.luciano.lux,
+.luciano.lux-track,
+.luciano .sslp-wrap {
+	--accent: rgb(219,176,162);
+	--dkAccent: #DBB0A2;
+}
+
 .maeve.lux,
 .maeve.lux-track,
 .maeve .sslp-wrap {
@@ -87,18 +94,18 @@
 	--dkAccent: rgb(188,57,8);
 }
 
-.luciano.lux,
-.luciano.lux-track,
-.luciano .sslp-wrap {
-	--accent: rgb(219,176,162);
-	--dkAccent: #DBB0A2;
-}
-
 .max.lux,
 .max.lux-track,
 .max .sslp-wrap {
 	--accent: #3FC9C2;
 	--dkAccent: #3FC9C2;
+}
+
+.michalis.lux,
+.michalis.lux-track,
+.michalis .sslp-wrap {
+	--accent: rgb(85,42,63);
+	--dkAccent: rgb(188,57,8);
 }
 
 .rhys.lux,
