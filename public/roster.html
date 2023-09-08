@@ -149,8 +149,8 @@ by wrapping the variables in 3 curly bracketsinstead of 2.
 /*variables*/
 :root {
   /*layout*/
-  --postWidth: 1200px; /*character sheet container*/
-  --barWidth: 80px; 
+  --postWidth: 1100px; /*character sheet container*/
+  --barWidth: 100px; 
 
   /*font styles*/
   --fontSize: 16px;
@@ -368,11 +368,14 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
 /* FILTERS */
 
 .filter {
+  display:inline-grid;
+  justify-items:center;
+  align-items:center;
   position:fixed;
   overflow:auto;
   top:120px;
   max-width:200px;
-  margin-right:100px;
+  min-width:min-content;
   text-align:center;
 }
 .filter-gender {
@@ -431,7 +434,7 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
 
 .container {
   position: relative;
-  width: 100%;
+  width: 90%;
   min-width: 250px;
   height: 100vh;
   margin: auto;
@@ -446,7 +449,7 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
   -webkit-animation-duration: 1.2s;
   animation-name: fadeIn;
   animation-duration: 1.2s;
-  margin-left: var(--barWidth);
+  margin-left: 200px;
 }
 
 .content_wrapper.grid {
