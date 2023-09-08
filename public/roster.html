@@ -366,9 +366,32 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
 }
 
 /* FILTERS */
-/*.filters{
-  display:grid;
-}*/
+
+.filters{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  position:fixed;
+  overflow:auto;
+  top:120px;
+  max-width:200px;
+  text-align:center;
+
+}
+.filter-gender {
+  margin-top:10px;
+  text-align:center;
+}
+
+.filter-species {
+  margin-top:10px;
+  text-align:center;
+}
+
+.filter-orientation {
+  margin-top:10px;
+  text-align:center;
+}
 
 /* CSS PRELOADER (loading.io) */
 .lds-ring {
@@ -1122,6 +1145,8 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
       <a href="#" title="puca" data-filter=".puca" class="tooltip">puca</a>
     </div>
     
+
+     </div>
     </div>
 
     <!--PASTE MORE FILTERS HERE-->
