@@ -367,16 +367,13 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
 
 /* FILTERS */
 
-.filters{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-around;
+.filter {
   position:fixed;
   overflow:auto;
   top:120px;
   max-width:200px;
+  padding-right:10px;
   text-align:center;
-
 }
 .filter-gender {
   margin-top:10px;
@@ -384,11 +381,6 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
 }
 
 .filter-species {
-  margin-top:10px;
-  text-align:center;
-}
-
-.filter-orientation {
   margin-top:10px;
   text-align:center;
 }
@@ -671,6 +663,7 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
   overflow: hidden;
   margin: 15px;
   opacity: 0;
+  padding:0;
 }
 
 .grid-item > a {
@@ -1126,7 +1119,7 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
 <!--NAVIGATION END------------------------------------------------------>
 
 
-	<!--filters--><div class="filters">
+	<!--filters--><div class="filter">
     <!--COPY HERE-->
     <a href="#" title="show all" data-filter="*" class="default tooltip">all</a>
     <!--COPY END-->
@@ -1143,12 +1136,9 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
       <a href="#" title="dragon" data-filter=".dragon" class="tooltip">dragon</a>
       <a href="#" title="hybrid" data-filter=".hybrid" class="tooltip">hybrid</a>
       <a href="#" title="puca" data-filter=".puca" class="tooltip">puca</a>
+      <a href="#" title="barghest" data-filter=".barghest" class="tooltip">barghest</a>
     </div>
-    
-
-     </div>
-    </div>
-
+  </div>
     <!--PASTE MORE FILTERS HERE-->
 
       <!--CREDIT-->
