@@ -365,6 +365,11 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
   color: var(--navigationText);
 }
 
+/* FILTERS */
+/*.filters{
+  display:grid;
+}*/
+
 /* CSS PRELOADER (loading.io) */
 .lds-ring {
   display: inline-block;
@@ -1090,24 +1095,28 @@ input#sidebar_button:checked ~ #sidebar_controls::before {
                     <ul>
                     <li><a href="./gb.html">Thread List</a></li>
                     <li><a href="./gb-charts.html">Charts</a></li>
-		    <li><a href="./roster.html">Roster</a></li>
+		                <li><a href="./roster.html">Roster</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
 <!--NAVIGATION END------------------------------------------------------>
 
-	<!--filters-->
+
+	<!--filters--><div class="filters">
     <!--COPY HERE-->
-   <div class="filters"> <li><a href="#" title="show all" data-filter="*" class="default tooltip">
-      <i class="far fa-star"></i></a></li>
+    <a href="#" title="show all" data-filter="*" class="default tooltip">all</a>
     <!--COPY END-->
-    <li><a href="#" title="filter 1" data-filter=".f1" class="tooltip">
-      <i class="far fa-star"></i></a></li>
-    <li><a href="#" title="filter 2" data-filter=".f2" class="tooltip">
-      <i class="far fa-star"></i></a></li>
-    <li><a href="#" title="filter 3" data-filter=".f3" class="tooltip">
-      <i class="far fa-star"></i></a></li></ul></div>
+    <div class="filter-gender">
+      <a href="#" title="male" data-filter=".male" class="tooltip">male</a>
+      <a href="#" title="female" data-filter=".female" class="tooltip">female</a>
+      <a href="#" title="nonbinary" data-filter=".nonbinary" class="tooltip">nonbinary</a>
+    </div>
+    <div class="filter-species">
+      <a href="#" title="werecreature" data-filter=".were" class="tooltip">werecreature</a>
+    </div>
+    
+    </div>
 
     <!--PASTE MORE FILTERS HERE-->
 
