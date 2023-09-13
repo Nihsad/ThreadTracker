@@ -6,7 +6,14 @@
 .alexander.lux,
 .alexander.lux-track,
 .alexander .sslp-wrap {
-	--accent: rgb(79,40,28);
+	--accent: rgb(172,83,65);
+	--dkAccent: rgb(107,92,165);
+}
+
+.artemisia.lux,
+.artemisia.lux-track,
+.artemisia .sslp-wrap {
+	--accent: rgb(224,180,132);
 	--dkAccent: rgb(107,92,165);
 }
 
@@ -22,6 +29,20 @@
 .calvin .sslp-wrap {
 	--accent: rgb(112,128,144);
 	--dkAccent: rgb(54,69,79);
+}
+
+.durante.lux,
+.durante.lux-track,
+.durante .sslp-wrap {
+	--accent: rgb(36,178,173);
+	--dkAccent: rgb(54,69,79);
+}
+
+.eirian.lux,
+.eirian.lux-track,
+.eirian .sslp-wrap {
+	--accent:rgb(29,116,222);
+	--dkAccent: rgb(251,189,102);
 }
 
 .eliane.lux,
@@ -64,6 +85,12 @@
 .kharim .sslp-wrap {
 	--accent: rgb(247,181,56);
 	--dkAccent: rgb(219,124,38);
+}
+
+.kit.lux,
+.kit.lux-track,
+.kit .sslp-wrap {
+	--accent: rgb(253,177,113);
 }
 
 .lochlann.lux,
@@ -111,7 +138,7 @@
 .rhys.lux,
 .rhys.lux-track,
 .rhys .sslp-wrap{
-	--accent: rgb(120,1,22);
+	--accent: rgb(238,34,36);
 	--dkAccent: rgb(34,9,1);
 }
 
