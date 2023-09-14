@@ -112,10 +112,11 @@
               border: none;
               background: none;
             }
-         
-         
-            
-         
+
+            body {
+              background-color:var(--white);
+            }
+          
             h1 {
               font-size: 30px;
             }
@@ -139,7 +140,7 @@
             .rosnav {
               position: fixed;
               top: 70px;
-              width: auto;
+              width: 300px;
               height: 100%;
               margin-bottom: 7px;
               padding: 0 15px 0 50px;
@@ -147,12 +148,15 @@
               background-color: var(--offwhite);
               background-position:fixed;
               border-right:1px solid var(--ltgrey);
+              z-index:1;
+              text-align:center;
             }
          
             h3 {
               letter-spacing: .5px;
               margin: 5px 0;
               text-transform:uppercase;
+              border-bottom:2px solid var(--dkgrey);
             }
          
          
@@ -163,8 +167,8 @@
          
             .filters button {
               font-family: heebo, helvetica neue, helvetica, arial, sans-serif;
+              display:block;
               font-size: 13px;
-              display: block;
               outline: none;
               color: inherit;
               padding: 1px 0
@@ -192,6 +196,8 @@
             main {
               margin-top: 0px;
               margin-left: 300px;
+              height:100%;
+              background-color:var(--white);              
             }
          
             .grid {
@@ -215,14 +221,16 @@
               overflow: hidden;
               background: #bababa;
               height:350px;
-              width:250px;              
+              width:250px;
+              border:2px solid var(--ltgrey);
             }
 
             .content {
               font-size: 14px;
               min-height: 60px;
-              padding: 10px 10px 30px;
-              background: #fff;
+              width:250px;
+              padding: 10px 15px 20px;
+              background: var(--ltgrey);
             }
          
             .info a {
@@ -238,19 +246,13 @@
             h2 {
               font-size: 18px;
               text-transform: uppercase;
-            }
-         
-            h2:after {
-              font-size: 60%;
-              font-weight: normal;
-              margin-left: 1px;
-              content: '\00ae';
-              vertical-align: super;
+              color:var(--accent);
             }
          
             .name {
               font-family: helvetica neue, helvetica, arial, heebo, sans-serif;
-              line-height: 15px;
+              line-height: 20px;
+              color:var(--white);
             }
          
             .expand figure img {
@@ -446,8 +448,26 @@
               <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium ea magnam pariatur autem, adipisci ipsa, neque hic reiciendis architecto recusandae minima aut ullam eaque perferendis. Debitis fugiat, ea facilis. <a href="#">hello link</a></div>
               </div>
               </div>
+              <div class="grid grid-item m were">
+                <figure><img src="https://www.designscene.net/wp-content/uploads/2016/05/Ewan-McGregor-GQ-Germany-Hunter-Gatti-02-620x930.jpg"></figure>
+                <div class="content">
+                <div class="name">
+                <h2>Bryn Cheshire</h2>
+                EWAN McGREGOR</div>
+                <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium ea magnam pariatur autem, adipisci ipsa, neque hic reiciendis architecto recusandae minima aut ullam eaque perferendis. Debitis fugiat, ea facilis. <a href="#">hello link</a></div>
+                </div>
+                </div>
+                <div class="grid grid-item m were">
+                  <figure><img src="https://www.designscene.net/wp-content/uploads/2016/05/Ewan-McGregor-GQ-Germany-Hunter-Gatti-02-620x930.jpg"></figure>
+                  <div class="content">
+                  <div class="name">
+                  <h2>Bryn Cheshire</h2>
+                  EWAN McGREGOR</div>
+                  <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium ea magnam pariatur autem, adipisci ipsa, neque hic reiciendis architecto recusandae minima aut ullam eaque perferendis. Debitis fugiat, ea facilis. <a href="#">hello link</a></div>
+                  </div>
+                </div>
            
-              <div class="grid grid-item m phoe">
+            <div class="grid grid-item m phoe">
               <figure><img src="https://hollywoodlife.com/wp-content/uploads/2019/10/avan-jogia-01.jpg"></figure>
               <div class="content">
               <div class="name">
