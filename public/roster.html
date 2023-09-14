@@ -114,13 +114,7 @@
             }
          
          
-            body {
-              font-size: 13px;
-              color: #1d1d1d;
-              background: #f5f5f5;
-              font-family: "heebo", "helvetica neue", helvetica, arial, sans-serif;
-              overflow-x:hidden;
-            }
+            
          
             h1 {
               font-size: 30px;
@@ -131,7 +125,7 @@
             }
          
             h1, h2, h3, h4, h5, h6 {
-              font-family: helvetica neue, helvetica, arial, heebo, sans-serif;
+              font-family: var(--font-body);
             }
          
             .back {
@@ -144,7 +138,7 @@
          
             .rosnav {
               position: fixed;
-              top: 0;
+              top: 70px;
               width: auto;
               height: 100%;
               margin-bottom: 7px;
@@ -157,7 +151,8 @@
          
             h3 {
               letter-spacing: .5px;
-              margin: 5px 0
+              margin: 5px 0;
+              text-transform:uppercase;
             }
          
          
@@ -195,7 +190,7 @@
             }
          
             main {
-              margin-top: 200px;
+              margin-top: 0px;
               margin-left: 300px;
             }
          
@@ -206,7 +201,7 @@
               margin: 0 auto 100px;
             }
          
-            .grid-item {
+            .grid.grid-item {
               float: left;
               width: 250px;
               height: 400px;
@@ -269,7 +264,7 @@
          
             .grid-item img {
               float: left;
-              height: 100%;
+              width: 100%;
               object-fit:cover;
             }
          
@@ -396,12 +391,12 @@
                 </li>
             </ul>
         </nav>
-        <div class="rosnav" data-0="padding-top:300px;overflow:hidden;" data-250="padding-top:70px; overflow:auto;">
+        <nav class="rosnav" data-0="padding-top:300px;overflow:hidden;" data-250="padding-top:70px; overflow:auto;">
           <div class="filters">
          
             <!-- category one -->
             <div class="button-group" data-filter-group="gender">
-              <h3>GENDER</h3>
+              <h3>gender</h3>
               <button class="button is-checked" data-filter="">all</button>
               <button class="button" data-filter=".m">male</button>
               <button class="button" data-filter=".f">female</button>
@@ -410,7 +405,7 @@
          
             <!-- category two -->
             <div class="button-group" data-filter-group="species">
-              <h3>SPECIES</h3>
+              <h3>species</h3>
               <button class="button is-checked" data-filter="">all</button>
               <button class="button" data-filter=".hyb">hybrid</button>
               <button class="button" data-filter=".were">werecreature</button>
@@ -438,11 +433,11 @@
             </div>-->
          
          
-          </div>
+          </nav>
         </div>
         <main> 
           <div class="grid">
-            <div class="grid-item m were">
+            <div class="grid grid-item m were">
               <figure><img src="https://www.designscene.net/wp-content/uploads/2016/05/Ewan-McGregor-GQ-Germany-Hunter-Gatti-02-620x930.jpg"></figure>
               <div class="content">
               <div class="name">
@@ -452,7 +447,7 @@
               </div>
               </div>
            
-              <div class="grid-item m phoe">
+              <div class="grid grid-item m phoe">
               <figure><img src="https://hollywoodlife.com/wp-content/uploads/2019/10/avan-jogia-01.jpg"></figure>
               <div class="content">
               <div class="name">
@@ -481,8 +476,6 @@
           <script src=
           "https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" type=
           "text/javascript"></script> 
-          <script type="text/javascript">
-              var s = skrollr.init();
-          </script>
+
     </body>
 </html>
