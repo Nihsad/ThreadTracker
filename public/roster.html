@@ -3,6 +3,7 @@
     <head>
         <title>Dashin | Thread Tracker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-16">
 
         <!--Styles-->
         <link rel="stylesheet" href="../dist/css/styles.css" />
@@ -13,14 +14,24 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/e45a4660e7.js" crossorigin="anonymous"></script>
+
 
         <!--Icons-->
 		<link href="https://dawneggleton.github.io/css/all.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{Favicon}"/>
 
         <!--Script Libraries-->
 		<script type='text/javascript' src='https://files.jcink.net/html/jquery-1.7.2.min.js'></script>
 		<script type='text/javascript' src='https://files.jcink.net/html/jquery.cookie-1.3.1.js'></script> 
 		<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
 
         <!--Settings-->
         <script type='text/javascript' src='../dist/js/settings.js'></script>
@@ -30,347 +41,366 @@
         <script type='text/javascript' src='../dist/js/functions.js'></script>
         <script type='text/javascript' src='../dist/js/scripts.js'></script>
 
-        <!--isotope scripts-->
-        <script>$(document).ready(function() {
-          // init Isotope
-          var $grid = $('.grid').isotope({
-              itemSelector: '.grid-item',
-              masonry: {
-                  columnWidth: 250,
-                  fitWidth: true,
-                  gutter: 3
-              },
-              hiddenStyle: {
-                  opacity: 0
-              },
-              visibleStyle: {
-                  opacity: 1
-              },
-              transitionDuration: '0.5s'
-          });
-          // layout Isotope after each image loads
-          $grid.imagesLoaded().progress(function() {
-              $grid.isotope('layout');
-          });
-          // store filter for each group
-          var filters = {};
-          $('.filters').on('click', '.button', function() {
-              var $this = $(this);
-              // get group key
-              var $buttonGroup = $this.parents('.button-group');
-              var filterGroup = $buttonGroup.attr('data-filter-group');
-              // set filter for group
-              filters[filterGroup] = $this.attr('data-filter');
-              // combine filters
-              var filterValue = concatValues(filters);
-              // set filter for Isotope
-              $grid.isotope({
-                  filter: filterValue
-              });
-          });
-          // change is-checked class on buttons
-          $('.button-group').each(function(i, buttonGroup) {
-              var $buttonGroup = $(buttonGroup);
-              $buttonGroup.on('click', 'button', function() {
-                  $buttonGroup.find('.is-checked').removeClass('is-checked');
-                  $(this).addClass('is-checked');
-              });
-          });
-          // change size of item by toggling gigante class
-          $grid.on('click', '.grid-item', function() {
-              $(this).toggleClass('expand');
-              // trigger layout after item size changes
-              $grid.isotope('layout');
-          });
-      });
-      // flatten object by concatting values
-      function concatValues(obj) {
-          var value = '';
-          for (var prop in obj) {
-              value += obj[prop];
-          }
-          return value;
-      }
+        <!--JQUERY-->
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  
+        <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script><script src="https://dl.dropbox.com/s/r1zusw6l724jclc/tooltips.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+        <script>
+  (function($){
+  $(document).ready(function(){
+  $("a[title]").style_my_tooltips({
+  tip_follows_cursor:true,
+  tip_delay_time:90,
+  tip_fade_speed:600,
+  attribute:"title"
+  });
+  });
+  })(jQuery);
+  </script>
+<style type="text/css">
+.iframe-controls--desktop { 
+  position:fixed; 
+  top:0px; 
+  right:0px; 
+  z-index:999999999999;  
+  text-shadow:none; 
+  box-shadow:none;
+}
 
-      function goBack() {
-          window.history.back();
-      }</script>
-      <style type="text/css">
- 
-        ::-webkit-scrollbar{width: 6px;}
-        ::-webkit-scrollbar-thumb{background-color:#acacac; border-radius: 3px; }
-        ::-webkit-scrollbar-track{background-color:#f5f5f5}
-        ::-moz-selection{background-color:#acacac;color:#fff}
-        ::selection{background-color:#acacac;color:#fff}
-         
-         
-         
-            *, figure {
-              box-sizing: border-box;
-              margin: 0;
-              padding: 0;
-              border: none;
-              background: none;
-            }
+::-webkit-scrollbar { 
+  width:6px; 
+}
 
-            body {
-              background-color:var(--white);
-            }
-          
-            h1 {
-              font-size: 30px;
-            }
-         
-            .desc {
-              width: 40vw;
-            }
-         
-            h1, h2, h3, h4, h5, h6 {
-              font-family: var(--font-body);
-            }
-         
-            .back {
-              text-align: right;
-              font-weight: bold;
-              text-transform: uppercase;
-              color: inherit;
-              font-family: helvetica neue, helvetica, arial, heebo, sans-serif;
-            }
-         
-            .rosnav {
-              position: fixed;
-              top: 70px;
-              width: 300px;
-              height: 100%;
-              margin-bottom: 7px;
-              padding: 0 15px 0 50px;
-              color: var(--accent);
-              background-color: var(--offwhite);
-              background-position:fixed;
-              border-right:1px solid var(--ltgrey);
-              z-index:1;
-              text-align:center;
-            }
-         
-            h3 {
-              letter-spacing: .5px;
-              margin: 5px 0;
-              text-transform:uppercase;
-              border-bottom:2px solid var(--dkgrey);
-            }
-         
-         
-         
-            .filters .button-group {
-              margin: 20px 0 0;
-            }
-         
-            .filters button {
-              font-family: heebo, helvetica neue, helvetica, arial, sans-serif;
-              display:block;
-              font-size: 13px;
-              outline: none;
-              color: inherit;
-              padding: 1px 0
-            }
-         
-            .filters button:before {
-              font-family: FontAwesome;
-              display: inline-block;
-              width: 15px;
-              content: '\f096';
-              vertical-align: middle;
-              text-align: left;
-              color: var(--ltgrey);
-            }
-         
-            .filters .button.is-checked::before {
-              content: '\f046';
-              color: var(--dkgrey);
-            }
-         
-            .filters button:hover {
-              cursor: pointer;
-            }
-         
-            main {
-              margin-top: 0px;
-              margin-left: 300px;
-              height:100%;
-              background-color:var(--white);              
-            }
-         
-            .grid {
-              line-height: 100%;
-              position: fixed;
-              top: 80px;
-              margin: 0 auto 100px;
-            }
-         
-            .grid.grid-item {
-              float: left;
-              width: 250px;
-              height: 400px;
-              margin-bottom: 3px;
-              padding-bottom:20px;
-              cursor: zoom-in;
-              box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
-            }
-         
-            figure {
-              overflow: hidden;
-              background: #bababa;
-              height:350px;
-              width:250px;
-              border:2px solid var(--ltgrey);
-            }
+::-webkit-scrollbar-track { 
+  background:var(--background-alt); 
+}
 
-            .content {
-              font-size: 14px;
-              min-height: 60px;
-              width:250px;
-              padding: 10px 15px 20px;
-              background: var(--ltgrey);
-            }
-         
-            .info a {
-              font-weight: bold;
-              text-decoration: none;
-              color: inherit;
-              background-image: linear-gradient(#fff 50%, #cecece 50%);
-              background-repeat: repeat-x;
-              background-position: 0 1.15em;
-              background-size: 1em 2px;
-            }
-         
-            h2 {
-              font-size: 18px;
-              text-transform: uppercase;
-              color:var(--accent);
-            }
-         
-            .name {
-              font-family: helvetica neue, helvetica, arial, heebo, sans-serif;
-              line-height: 20px;
-              color:var(--white);
-            }
-         
-            .expand figure img {
-              -webkit-transform: scale(1.5);
-              -ms-transform: scale(1.5);
-              -o-transform: scale(1.5);
-              -moz-transform: scale(1.5);
-              transform: scale(1.5);
-              opacity: .3;
-            }
-         
-            .grid-item img {
-              float: left;
-              width: 100%;
-              object-fit:cover;
-            }
-         
-            .expand figure {
-              height: 200px;
-            }
-         
-         
-            /*scale when hovering, but not on expand*/
-         
-            .grid-item:not(.expand) figure img {
-              -webkit-transition: .4s;
-              -o-transition: .4s;
-              -moz-transition: .4s;
-              transition: .4s;
-              -webkit-transform: scale(1);
-              -ms-transform: scale(1);
-              -o-transform: scale(1);
-              -moz-transform: scale(1);
-              transform: scale(1);
-            }
-         
-            .grid-item:not(.expand) figure:hover img {
-              -webkit-transform: scale(1.1);
-              -ms-transform: scale(1.1);
-              -o-transform: scale(1.1);
-              -moz-transform: scale(1.1);
-              transform: scale(1.1);
-            }
-         
-         
-            /*add grayscale to img*/
-         
-            .grid-item img {
-              opacity: .7;
-              -webkit-filter: grayscale(100%);
-              -o-filter: grayscale(100%);
-              filter: grayscale(100%);
-              mix-blend-mode: multiply;
-            }
-         
-         
-            /*remove grayscale on hover, but not expand*/
-         
-            .grid-item:not(.expand) img:hover {
-              opacity: 1;
-              -webkit-filter: grayscale(0%);
-              -o-filter: grayscale(0%);
-              filter: grayscale(0%);
-              mix-blend-mode: normal;
-            }
-         
-            .expand {
-              z-index: 99999999;
-              width: 502px;
-            }
-         
-            .info {
-              font-size: 13px;
-              line-height: 150%;
-              display: none;
-              margin: 15px 0;
-              padding: 0 10px;
-              text-align: justify;
-              border-left: 1px solid #cecece;
-            }
-         
-            .expand .info {
-              display: inline-block;
-            }
-         
-            .info p {
-              padding: 5px 0;
-            }
-         
-            .info p:first-of-type {
-              padding-top: 0;
-            }
-         
-            .info p:last-of-type {
-              padding-bottom: 0;
-            }
-         
-         
-         
-            /*---------------------- color change magic ----------------------*/
-         
-            .orange figure {
-              background: #b57f50;
-            }
-         
-            .blue figure {
-              background: #b4d2ba;
-            }
-         
-            .green figure {
-              background: #b2bd7e;
-            }
-         
-         
-            #credit{line-height:100%;border-radius:50%;position:fixed;bottom:10px;right:10px;color:#fff;background:rgba(0,0,0,.2);padding:5px;width:20px;height:20px;overflow:hidden;font-size:10px;font-weight:100;white-space:nowrap;-moz-transition:all .6s ease-in-out;-ms-transition:all .6s ease-in-out;-o-transition:all .6s ease-in-out;-webkit-transition:all .6s ease-in-out;transition:all .6s ease-in-out}#credit:hover{background:#000;width:80px;border-radius:15px}#credit:before{font-size:10px;content:'\f292';font-family:FontAwesome;padding-right:5px}
-         
-         
-        </style>
+::-webkit-scrollbar-thumb { 
+  background:var(--three); 
+}
+
+a:hover { 
+  transition:all 2s linear; 
+  cursor:pointer; 
+}
+
+small, big { 
+  font-size:12.5px; 
+}
+
+img { 
+  max-width:100%; 
+  height:auto; 
+}
+
+u { 
+  background:var(--three); 
+  padding:0 5px; 
+  outline:none; 
+  border:none; 
+  text-decoration:none; 
+  font-style:italic; 
+  color:var(--background); 
+}
+
+blockquote { 
+  margin:10px; 
+  padding:0px; 
+  padding-left:15px; 
+  border-left:2px solid var(--two); 
+}
+
+blockquote blockquote { 
+  padding-left:15px; 
+  margin-left:0px; 
+  border-color:var(--three); 
+}
+
+#s-m-t-tooltip { 
+  max-width:200px; 
+  margin:15px; 
+  text-align:center; 
+  font-weight:500; 
+  text-transform:lowercase; 
+  padding:3px 15px; 
+  z-index:999999999999999999999;
+  color:var(--two); 
+  border-radius:25px; 
+  background:var(--borders); 
+  font-size:12.5px;
+}
+
+h1,
+.title {
+    font-family: "Playfair Display";
+    text-align: center;
+    font-size: 25px;
+    color: var(--two);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 900;
+    font-family: "Playfair Display";
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--three);
+    font-size: 16px;
+}
+h2 b,
+h2 i {
+    font-family: "Playfair Display";
+    text-transform: uppercase;
+    font-size: 16px;
+}
+h2 span {
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+b,
+strong {
+    font-family: "Playfair Display";
+    font-weight: 900;
+    font-style: italic;
+    color: var(--one);
+    font-size: 13.5px;
+}
+
+i,
+em {
+    color: var(--three);
+}
+
+hr {
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    float: center;
+    border-width: 5px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--background);
+}
+
+.more {
+    font-family: "Playfair Display";
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    background: var(--two);
+    color: var(--borders);
+    margin: 25px 0px;
+    width: 450px;
+    box-sizing: border-box;
+}
+
+.more:hover {
+    background: var(--three);
+    transition: 2s all linear;
+    cursor: pointer;
+}
+
+body.main, body.filters {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 200%;
+    color: var(--text);
+    text-align: justify;
+    background: var(--background);
+    background-image: url({image:Background});
+    background-position: top left;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing:border-box;
+}
+
+button {
+    background: transparent;
+    color: var(--three);
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    border: none;
+}
+.button {
+    width: 80px;
+    background: var(--background);
+    font-family: "Poppins", sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    color: var(--text);
+    margin: 5px;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+    margin-top: -115px;
+    margin-left: 125px;
+    background: var(--two);
+    border-radius: 100%;
+}
+#icon i {
+    color: var(--background-alt);
+    font-size: 20px;
+    line-height: 52px;
+}
+
+#icon:hover {
+    background: var(--one);
+    transition: all ease-in-out 2s;
+    cursor: pointer;
+}
+
+.is-checked {
+    border-bottom: 2px solid var(--three);
+}
+
+.popup {
+    display: none;
+    background: var(--background-alt);
+    position: fixed;
+    z-index: 999999999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.close {
+    position: fixed;
+    text-align: center;
+    background: var(--background);
+    box-sizing: border-box;
+    padding: 20px;
+    padding-bottom: 50px;
+    margin: 0px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 25px;
+}
+.close:hover {
+    cursor: crosshair;
+}
+
+.main {
+    max-width: calc(100vw - 300px);
+    margin: 0 auto;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+.muse {
+    display: inline-block;
+    width: 200px;
+    height: 350px;
+    background: var(--background-alt);
+    border-radius: 5px;
+    position: relative;
+    margin: 10px;
+}
+
+.muse img {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    object-fit:cover;
+    left: 0;
+    top: 0;
+    margin: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+}
+
+.name {
+    margin-top: 175px;
+    width: 200px;
+    text-align: center;
+    font-family: "Playfair Display";
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--accent);
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.name span {
+    font-family: "Poppins";
+    font-size: 12px;
+    color: var(--dkgrey);
+    text-transform: lowercase;
+    font-style: normal;
+    font-weight: 300;
+}
+
+#details {
+    margin-top: 0px;
+    width: 200px;
+    height: 105px;
+    text-align: justify;
+    overflow: auto;
+    font-family:var(--font-body);
+    font-size:12px;
+}
+
+#details::-webkit-scrollbar {
+    width: 0px;
+}
+
+.filters {
+    position: fixed;
+    z-index: 999999;
+    text-align: center;
+    overflow: auto;
+    background: var(--offwhite);
+    border-right:1px solid var(--ltgrey);
+    box-sizing: border-box;
+    padding: 25px;
+    padding-left: 32.5px;
+    width: 250px;
+    height: 100vh;
+    left: 0;
+    text-align: left;
+}
+.button-group {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+#sugarhoney {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+}
+#sugarhoney a {
+    border: none;
+    color: {
+        color: Accent One;
+    }
+}
+
+{CustomCSS}
+</style>
     </head>
     <body>
         <nav>
@@ -393,109 +423,163 @@
                 </li>
             </ul>
         </nav>
-        <nav class="rosnav" data-0="padding-top:300px;overflow:hidden;" data-250="padding-top:70px; overflow:auto;">
-          <div class="filters">
-         
-            <!-- category one -->
-            <div class="button-group" data-filter-group="gender">
-              <h3>gender</h3>
-              <button class="button is-checked" data-filter="">all</button>
-              <button class="button" data-filter=".m">male</button>
-              <button class="button" data-filter=".f">female</button>
-              <button class="button" data-filter=".nb">nonbinary</button>
-            </div>
-         
-            <!-- category two -->
-            <div class="button-group" data-filter-group="species">
-              <h3>species</h3>
-              <button class="button is-checked" data-filter="">all</button>
-              <button class="button" data-filter=".hyb">hybrid</button>
-              <button class="button" data-filter=".were">werecreature</button>
-              <button class="button" data-filter=".phoe">phoenix</button>
-              <button class="button" data-filter=".barg">bargest</button>
-              <button class="button" data-filter=".vamp">vampire</button>
-              <button class="button" data-filter=".puca">puca</button>
-              <button class="button" data-filter=".qilin">qilin</button>
-              <button class="button" data-filter=".angel">angel</button>
-              <button class="button" data-filter=".marid">marid</button>
-              <button class="button" data-filter=".fae">faerie</button>
-              <button class="button" data-filter=".dragon">dragon</button>
-              <button class="button" data-filter=".selkie">selkie</button>
-              <button class="button" data-filter=".kelp">kelpie</button>
-              <button class="button" data-filter=".witch">witch</button>
-            </div>
-         
-            <!-- category three -->
-           <!-- <div class="button-group" data-filter-group="color">
-              <h3>COLOR</h3>
-              <button class="button is-checked" data-filter="">all</button>
-              <button class="button" data-filter=".green">green</button>
-              <button class="button" data-filter=".orange">orange</button>
-              <button class="button" data-filter=".blue">blue</button>
-            </div>-->
-         
-         
-          </nav>
-        </div>
-        <main> 
-          <div class="grid">
-            <div class="grid grid-item m were">
-              <figure><img src="https://www.designscene.net/wp-content/uploads/2016/05/Ewan-McGregor-GQ-Germany-Hunter-Gatti-02-620x930.jpg"></figure>
-              <div class="content">
-              <div class="name">
-              <h2>Bryn Cheshire</h2>
-              EWAN McGREGOR</div>
-              <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium ea magnam pariatur autem, adipisci ipsa, neque hic reiciendis architecto recusandae minima aut ullam eaque perferendis. Debitis fugiat, ea facilis. <a href="#">hello link</a></div>
-              </div>
-              </div>
-              <div class="grid grid-item m were">
-                <figure><img src="https://www.designscene.net/wp-content/uploads/2016/05/Ewan-McGregor-GQ-Germany-Hunter-Gatti-02-620x930.jpg"></figure>
-                <div class="content">
-                <div class="name">
-                <h2>Bryn Cheshire</h2>
-                EWAN McGREGOR</div>
-                <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium ea magnam pariatur autem, adipisci ipsa, neque hic reiciendis architecto recusandae minima aut ullam eaque perferendis. Debitis fugiat, ea facilis. <a href="#">hello link</a></div>
-                </div>
-                </div>
-                <div class="grid grid-item m were">
-                  <figure><img src="https://www.designscene.net/wp-content/uploads/2016/05/Ewan-McGregor-GQ-Germany-Hunter-Gatti-02-620x930.jpg"></figure>
-                  <div class="content">
-                  <div class="name">
-                  <h2>Bryn Cheshire</h2>
-                  EWAN McGREGOR</div>
-                  <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium ea magnam pariatur autem, adipisci ipsa, neque hic reiciendis architecto recusandae minima aut ullam eaque perferendis. Debitis fugiat, ea facilis. <a href="#">hello link</a></div>
-                  </div>
-                </div>
-           
-            <div class="grid grid-item m phoe">
-              <figure><img src="https://hollywoodlife.com/wp-content/uploads/2019/10/avan-jogia-01.jpg"></figure>
-              <div class="content">
-              <div class="name">
-              <h2>Calvin Pyrrhus</h2>
-              001 ARCHETYPE</div>
-              <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium ea magnam pariatur autem, adipisci ipsa, neque hic reiciendis architecto recusandae minima aut ullam eaque perferendis. Debitis fugiat, ea facilis.</div>
-              </div>
-              </div>
-          </div>
-          </main>
-           
-           
-          <!-------------------------- END MAIN CONTENT --------------------------
-           
-          do me a favor and don't delete my credit. 
-          its small and unobtrustive for a reason 
-          --->
-           
-          <a href="http://www.ikilledtherpc.tumblr.com">
-            <div id="credit">ikilledtherpc.</div>
-          </a>
-          </body>
-           
-          <!---script! don't touch=-->
-           
-          <script src=
-          "https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" type=
-          "text/javascript"></script> 
+        <div class="filters">
 
+       <div class="button-group" data-filter-group="gender" style="display:inline-block;margin-top:25px;text-align:left;">
+       <button class="button is-checked" style="color:var(--accent);border-bottom:2px solid var(--dkgrey);font-weight:500;width:175px;"  data-filter="">gender</button>
+       <button class="button" data-filter=".woman">women</button>
+       <button class="button" data-filter=".man">men</button>
+       <button class="button" data-filter=".nb">non binary</button>
+      </div> 
+      
+       
+       <div class="button-group" data-filter-group="age" style="margin-top:25px;display:inline-block;"><button class="button is-checked" style="color:var(--accent);border-bottom:2px solid var(--dkgrey);font-weight:500;width:175px;"  data-filter="">age</button>
+       
+       <button class="button" data-filter=".20s">20s</button>
+       <button class="button" data-filter=".30s">30s</button>
+       <button class="button" data-filter=".40s">40s</button>
+       <button class="button" data-filter=".imt">immortal</button>
+       </div> 
+       
+        <div class="button-group" data-filter-group="orientations"><button class="button is-checked" style="color:var(--accent);border-bottom:2px solid var(--dkgrey);width:175px; font-weight:500;"  data-filter="">orientations</button>
+       
+       <button class="button" data-filter=".het">hetero</button>
+       <button class="button" data-filter=".gay">gay</button>
+       <button class="button" data-filter=".bi">bisexual</button>
+       <button class="button" data-filter=".pan">pansexual</button>
+       </div> 
+       
+        
+        <div class="button-group" data-filter-group="species">
+        <button class="button is-checked" style="color:var(--accent);border-bottom:2px solid var(--dkgrey);width:175px; font-weight:500;"  data-filter="">species</button>
+       
+       <button class="button" data-filter=".human">human</button>
+       <button class="button" data-filter=".qilin">qilin</button>
+       </div> 
+       
+       <br><br>
+       
+      
+      
+      
+      </div>
+      
+      
+      
+      <div class="main">
+      
+      
+      
+      <!-- START OF MUSE -->    
+      <div class="muse man qilin imt">
+        <img src="https://i0.wp.com/screenagewasteland.com/wp-content/uploads/2022/05/ColinFarrellBirthdayFeatured.png?fit=1110%2C555&ssl=1">
+    <div class="name">kit angenent<br>
+        <span>colin farrell</span></div>
+        
+        <div id="details">a doctor running from his past, kit has spent most of his life trying to keep his brother out of the clutches of the gang they were both raised in.</div>
+        </div>
+    <!-- END OF MUSE -->
+
+          <!-- START OF MUSE -->    
+          <div class="muse man qilin imt">
+            <img src=" ">
+        <div class="name">kit angenent<br>
+            <span>colin farrell</span></div>
+            
+            <div id="details">a doctor running from his past, kit has spent most of his life trying to keep his brother out of the clutches of the gang they were both raised in.</div>
+            </div>
+        <!-- END OF MUSE -->
+      
+            <!-- START OF MUSE -->    
+        <div class="muse man qilin imt">
+          <img src=" ">
+      <div class="name">kit angenent<br>
+          <span>colin farrell</span></div>
+          
+          <div id="details">a doctor running from his past, kit has spent most of his life trying to keep his brother out of the clutches of the gang they were both raised in.</div>
+          </div>
+      <!-- END OF MUSE -->
+
+            <!-- START OF MUSE -->    
+            <div class="muse man qilin imt">
+              <img src=" ">
+          <div class="name">kit angenent<br>
+              <span>colin farrell</span></div>
+              
+              <div id="details">a doctor running from his past, kit has spent most of his life trying to keep his brother out of the clutches of the gang they were both raised in.</div>
+              </div>
+          <!-- END OF MUSE -->
+
+                <!-- START OF MUSE -->    
+        <div class="muse man qilin imt">
+          <img src=" ">
+      <div class="name">kit angenent<br>
+          <span>colin farrell</span></div>
+          
+          <div id="details">a doctor running from his past, kit has spent most of his life trying to keep his brother out of the clutches of the gang they were both raised in.</div>
+          </div>
+      <!-- END OF MUSE -->
+       </div>   
+       
+       
+      
+      <div id="sugarhoney"><a title="theme by sugar" href="https://ctrlsugar.tumblr.com/"><i class="fa-solid fa-heart"></i></a></div> 
+      
+      <!-- DO NOT REMOVE CREDIT!! -->
+      
+      
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+      <script>
+      $(document).ready( function() {
+       // init Isotope
+       var $grid = $('.main').isotope({
+           
+         itemSelector: '.muse',
+         layoutMode: 'masonry',
+        masonry: {
+          gutter: 20
+        } 
+      
+        
+       });
+      
+       // store filter for each group
+       var filters = {};
+      
+       $('.filters').on( 'click', '.button', function() {
+         var $this = $(this);
+         // get group key
+         var $buttonGroup = $this.parents('.button-group');
+         var filterGroup = $buttonGroup.attr('data-filter-group');
+         // set filter for group
+         filters[ filterGroup ] = $this.attr('data-filter');
+         // combine filters
+         var filterValue = concatValues( filters );
+         // set filter for Isotope
+         $grid.isotope({ filter: filterValue });
+       });
+      
+       // change is-checked class on buttons
+       $('.button-group').each( function( i, buttonGroup ) {
+         var $buttonGroup = $( buttonGroup );
+         $buttonGroup.on( 'click', 'button', function() {
+           $buttonGroup.find('.is-checked').removeClass('is-checked');
+           $( this ).addClass('is-checked');
+         });
+       });
+      
+      });
+      
+      
+      // flatten object by concatting values
+      function concatValues( obj ) {
+       var value = '';
+       for ( var prop in obj ) {
+         value += obj[ prop ];
+       }
+       return value;
+      }
+      
+       </script>
     </body>
 </html>
