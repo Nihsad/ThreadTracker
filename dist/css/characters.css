@@ -2,6 +2,10 @@
 	--accent: #222222;
 }
 
+.ailbhe.lux-track {
+	--accent: rgb(232,128,101);
+}
+
 .alexander.lux-track {
 	--accent: rgb(172,83,65);
 }
