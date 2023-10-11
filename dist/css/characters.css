@@ -46,6 +46,10 @@
 	--accent: rgb(241,129,128);
 }
 
+.hugo.lux-track {
+	--accent: rgb(171,164,143);
+}
+
 .inoue.lux-track {
 	--accent: rgb(172,216,170);
 }
