@@ -54,6 +54,10 @@
 	--accent: rgb(172,216,170);
 }
 
+.islay.lux-track {
+	--accent: rgb(121,86,99);
+}
+
 .keilani.lux-track {
 	--accent: rgb(154,140,152);
 }
