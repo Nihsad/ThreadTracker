@@ -58,6 +58,10 @@
 	--accent: rgb(121,86,99);
 }
 
+.jace.lux-track {
+	--accent: rgb(153,114,187);
+}
+
 .keilani.lux-track {
 	--accent: rgb(154,140,152);
 }
@@ -96,6 +100,10 @@
 
 .michalis.lux-track {
 	--accent: rgb(162,77,138);
+}
+
+.nicolas.lux-track {
+	--accent: rgb(15,143,105);
 }
 
 .rhys.lux-track {
