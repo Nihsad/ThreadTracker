@@ -78,6 +78,10 @@
 	--accent: rgb(173,181,211);
 }
 
+.leviathan.lux-track {
+	--accent: rgb(138,208,95);
+}
+
 .lochlann.lux-track {
 	--accent: rgb(158,204,209);
 }
