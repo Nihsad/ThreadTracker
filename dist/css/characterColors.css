@@ -1,0 +1,106 @@
+.dash-track,
+.dash {
+  --accent: rgb(var(--rgb));
+  --dkAccent: rgb(var(--rgb-dark, var(--rgb))); }
+  .dash-track.ailbhe,
+  .dash.ailbhe {
+    --rgb: 232,128,101; }
+  .dash-track.alexander,
+  .dash.alexander {
+    --rgb: 172,83,65; }
+  .dash-track.ariel,
+  .dash.ariel {
+    --rgb: 183,49,65; }
+  .dash-track.artemisia,
+  .dash.artemisia {
+    --rgb: 224,180,132; }
+  .dash-track.bryn,
+  .dash.bryn {
+    --rgb: 187,34,119; }
+  .dash-track.calvin,
+  .dash.calvin {
+    --rgb: 112,128,144; }
+  .dash-track.durante,
+  .dash.durante {
+    --rgb: 36,178,173; }
+  .dash-track.eirian,
+  .dash.eirian {
+    --rgb: 29,116,222; }
+  .dash-track.eliane,
+  .dash.eliane {
+    --rgb: 251,189,102; }
+  .dash-track.felix,
+  .dash.felix {
+    --rgb: 179,120,46; }
+  .dash-track.georgina,
+  .dash.georgina {
+    --rgb: 241,129,128; }
+  .dash-track.hugo,
+  .dash.hugo {
+    --rgb: 171,164,143; }
+  .dash-track.inoue,
+  .dash.inoue {
+    --rgb: 172,216,170; }
+  .dash-track.islay,
+  .dash.islay {
+    --rgb: 121,86,99; }
+  .dash-track.jace,
+  .dash.jace {
+    --rgb: 153,114,187; }
+  .dash-track.keilani,
+  .dash.keilani {
+    --rgb: 154,140,152; }
+  .dash-track.kharim,
+  .dash.kharim {
+    --rgb: 247,181,56; }
+  .dash-track.kit,
+  .dash.kit {
+    --rgb: 253,177,113; }
+  .dash-track.kylian,
+  .dash.kylian {
+    --rgb: 86,109,176; }
+  .dash-track.laurie,
+  .dash.laurie {
+    --rgb: 173,181,211; }
+  .dash-track.leviathan,
+  .dash.leviathan {
+    --rgb: 95,159,71; }
+  .dash-track.lochlann,
+  .dash.lochlann {
+    --rgb: 158,204,209; }
+  .dash-track.luciano,
+  .dash.luciano {
+    --rgb: 219,176,162; }
+  .dash-track.maeve,
+  .dash.maeve {
+    --rgb: 201,158,230; }
+  .dash-track.magalie,
+  .dash.magalie {
+    --rgb: 216,97,38; }
+  .dash-track.max,
+  .dash.max {
+    --rgb: 63,201,194; }
+  .dash-track.michalis,
+  .dash.michalis {
+    --rgb: 162,77,138; }
+  .dash-track.nicolas,
+  .dash.nicolas {
+    --rgb: 15,143,105; }
+  .dash-track.rhys,
+  .dash.rhys {
+    --rgb: 238,34,36; }
+  .dash-track.royal,
+  .dash.royal {
+    --rgb: 122,223,186; }
+  .dash-track.saoirse,
+  .dash.saoirse {
+    --rgb: 96,108,56; }
+  .dash-track.teimyn,
+  .dash.teimyn {
+    --rgb: 249,35,47; }
+  .dash-track.thealdrae,
+  .dash.thealdrae {
+    --rgb: 62,165,118; }
+  .dash-track.wren,
+  .dash.wren {
+    --rgb: 166,214,176; }

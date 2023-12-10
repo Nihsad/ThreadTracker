@@ -1,0 +1,141 @@
+.dash-track,
+.dash {
+    --accent: rgb(var(--rgb));
+    --dkAccent: rgb(var(--rgb-dark, var(--rgb)));
+    
+    &.ailbhe {
+        --rgb: 232,128,101;
+    }
+    
+    &.alexander {
+        --rgb: 172,83,65;
+    }
+    
+    &.ariel {
+        --rgb: 183,49,65;
+    }
+    
+    &.artemisia {
+        --rgb: 224,180,132;
+    }
+    
+    &.bryn {
+        --rgb: 187,34,119;
+    }
+    
+    &.calvin {
+        --rgb: 112,128,144;
+    }
+    
+    &.durante {
+        --rgb: 36,178,173;
+    }
+    
+    &.eirian {
+        --rgb: 29,116,222;
+    }
+    
+    &.eliane {
+        --rgb: 251,189,102;
+    }
+    
+    &.felix {
+        --rgb: 179,120,46;
+    }
+    
+    &.georgina {
+        --rgb: 241,129,128;
+    }
+    
+    &.hugo {
+        --rgb: 171,164,143;
+    }
+    
+    &.inoue {
+        --rgb: 172,216,170;
+    }
+    
+    &.islay {
+        --rgb: 121,86,99;
+    }
+    
+    &.jace {
+        --rgb: 153,114,187;
+    }
+    
+    &.keilani {
+        --rgb: 154,140,152;
+    }
+    
+    &.kharim {
+        --rgb: 247,181,56;
+    }
+    
+    &.kit {
+        --rgb: 253,177,113;
+    }
+    
+    &.kylian {
+        --rgb: 86,109,176;
+    }
+    
+    &.laurie {
+        --rgb: 173,181,211;
+    }
+    
+    &.leviathan {
+        --rgb: 95,159,71;
+    }
+    
+    &.lochlann {
+        --rgb: 158,204,209;
+    }
+    
+    &.luciano {
+        --rgb: 219,176,162;
+    }
+    
+    &.maeve {
+        --rgb: 201,158,230;
+    }
+    
+    &.magalie {
+        --rgb: 216,97,38;
+    }
+    
+    &.max {
+        --rgb: 63,201,194;
+    }
+    
+    &.michalis {
+        --rgb: 162,77,138;
+    }
+    
+    &.nicolas {
+        --rgb: 15,143,105;
+    }
+    
+    &.rhys {
+        --rgb: 238,34,36;
+    }
+    
+    &.royal {
+        --rgb: 122,223,186;
+    }
+    
+    &.saoirse {
+        --rgb: 96,108,56;
+    }
+    
+    &.teimyn {
+        --rgb: 249,35,47;
+    }
+    
+    &.thealdrae {
+        --rgb: 62,165,118;
+    }
+    
+    &.wren {
+        --rgb: 166,214,176;
+    }
+}
