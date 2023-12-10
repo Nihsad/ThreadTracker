@@ -157,7 +157,7 @@ function formatOldThread(site, siteURL, status, character, feature, title, threa
 
     return html;
 }
-function formatThread(site, siteURL, status, character, feature, title, threadID, icDate, partnerObjects, type, lastPost, delayClass, directoryString) {
+function formatThread(site, siteURL, status, character, feature, title, threadID, icDate, partnerObjects, type, lastPost, delayClass, directoryString, snippet) {
     //set writing partners
     let partners = ``;
     let partnerClasses = ``;
@@ -213,6 +213,7 @@ function formatThread(site, siteURL, status, character, feature, title, threadID
                     <span class="thread--ic-date">Set <span>${icDate}</span></span>
                     <span class="thread--last-post">Last Active <span>${lastPost}</span></span>
                 </div>
+                ${snippet && snippet !== '' && `<p>${snippet}</p>`}
             </div>
             <div class="thread--buttons">${buttons}</div>
         </div>
@@ -374,6 +375,7 @@ function populateThreads(array, siteObject) {
                 partners.push(partner.partner);
             }
         });
+        console.log(array[i]);
 
         html += formatThread(siteObject.Site,
                             siteObject.URL,
@@ -387,7 +389,8 @@ function populateThreads(array, siteObject) {
                             array[i].Type.toLowerCase(),
                             array[i].LastUpdated.toLowerCase(),
                             getDelay(array[i].LastUpdated),
-                            siteObject.Directory);
+                            siteObject.Directory,
+                            array[i].Snippet.trim());
     }
     document.querySelector('#tracker--rows').insertAdjacentHTML('beforeend', html);
 
