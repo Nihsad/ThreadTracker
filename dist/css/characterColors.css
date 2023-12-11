@@ -20,8 +20,9 @@
   .dash-track.calvin,
   .dash.calvin {
     --rgb: 112,128,144; }
-  .dash-track.durante,
-  .dash.durante {
+  .dash-track.durante, .dash-track.dante,
+  .dash.durante,
+  .dash.dante {
     --rgb: 36,178,173; }
   .dash-track.eirian,
   .dash.eirian {
@@ -38,8 +39,9 @@
   .dash-track.hugo,
   .dash.hugo {
     --rgb: 171,164,143; }
-  .dash-track.inoue,
-  .dash.inoue {
+  .dash-track.inoue, .dash-track.naoki,
+  .dash.inoue,
+  .dash.naoki {
     --rgb: 172,216,170; }
   .dash-track.islay,
   .dash.islay {
@@ -62,8 +64,9 @@
   .dash-track.laurie,
   .dash.laurie {
     --rgb: 173,181,211; }
-  .dash-track.levi,
-  .dash.levi {
+  .dash-track.levi, .dash-track.leviathan,
+  .dash.levi,
+  .dash.leviathan {
     --rgb: 95,159,71; }
   .dash-track.liam,
   .dash.liam {
@@ -83,11 +86,13 @@
   .dash-track.max,
   .dash.max {
     --rgb: 63,201,194; }
-  .dash-track.michalis,
-  .dash.michalis {
+  .dash-track.michalis, .dash-track.mik,
+  .dash.michalis,
+  .dash.mik {
     --rgb: 162,77,138; }
-  .dash-track.nicolas,
-  .dash.nicolas {
+  .dash-track.nicolas, .dash-track.col,
+  .dash.nicolas,
+  .dash.col {
     --rgb: 15,143,105; }
   .dash-track.rhys,
   .dash.rhys {
