@@ -210,7 +210,7 @@ function formatThread(site, siteURL, status, character, feature, title, threadID
     } else {
         buttons = `<div class="icon" title="${type}"></div>`;
     }
-    let html = `<div class="thread lux-track grid-item status--${status} ${character.split(' ')[0].toLowerCase()} delay--${delayClass} type--${type.split(' ')[0]} ${partnerClasses} ${ftClasses} grid-item">
+    let html = `<div class="thread dash-track grid-item status--${status} ${character.split(' ')[0].toLowerCase()} delay--${delayClass} type--${type.split(' ')[0]} ${partnerClasses} ${ftClasses} grid-item">
         <div class="thread--wrap">
             <div class="thread--main">
                 <a href="${siteURL}/?showtopic=${threadID}&view=getnewpost" target="_blank" class="thread--title">${title}</a>
