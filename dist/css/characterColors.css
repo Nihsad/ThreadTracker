@@ -62,9 +62,12 @@
   .dash-track.laurie,
   .dash.laurie {
     --rgb: 173,181,211; }
-  .dash-track.leviathan,
-  .dash.leviathan {
+  .dash-track.levi,
+  .dash.levi {
     --rgb: 95,159,71; }
+  .dash-track.liam,
+  .dash.liam {
+    --rgb: 166,146,175; }
   .dash-track.lochlann,
   .dash.lochlann {
     --rgb: 158,204,209; }
