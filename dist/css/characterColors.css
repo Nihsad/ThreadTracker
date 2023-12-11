@@ -36,6 +36,10 @@
   .dash-track.georgina,
   .dash.georgina {
     --rgb: 241,129,128; }
+  .dash-track.halsten, .dash-track.hal,
+  .dash.halsten,
+  .dash.hal {
+    --rgb: 132,2,16; }
   .dash-track.hugo,
   .dash.hugo {
     --rgb: 171,164,143; }
