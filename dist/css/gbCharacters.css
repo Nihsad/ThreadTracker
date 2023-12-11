@@ -571,3 +571,22 @@
       font-style: normal;
       font-size: 0.7em;
       color: var(--character-text); }
+
+.character--profile-item .scroll tttt {
+  font-family: var(--font-script);
+  font-size: 1.25vw;
+  color: var(--text-color); }
+
+.character--profile-item .scroll ttt {
+  font-family: var(--font-script);
+  font-size: var(--xlBody);
+  color: var(--text-color); }
+
+.character--profile-item .scroll tt {
+  font-family: var(--font-serif);
+  font-size: var(--xlBody); }
+
+.character--profile-item .scroll dashblock {
+  display: block;
+  max-width: 550px;
+  margin: 0 auto; }
