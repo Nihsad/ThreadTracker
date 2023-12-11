@@ -1,5 +1,21 @@
 @import './sizes';
 
+@font-face {
+    font-family: "Saturdate Script";
+    src: url("https://files.jcink.net/uploads2/godlybehaviour/GB23/SaturdateScript.otf") format("opentype"), url("https://files.jcink.net/uploads2/godlybehaviour/GB23/SaturdateScript.ttf") format("truetrype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+  
+@font-face {
+    font-family: "Saturdate Serif";
+    src: url("https://files.jcink.net/uploads2/godlybehaviour/GB23/SaturdateSerif.otf") format("opentype"), url("https://files.jcink.net/uploads2/godlybehaviour/GB23/SaturdateSerif.ttf") format("truetrype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
 :root {
     --white: rgba(247,247,247,1);
     --offwhite: rgba(236,236,236,1);
@@ -17,6 +33,10 @@
     --font-body: 'Palanquin', sans-serif;
     --font-accent: 'Palanquin Dark', sans-serif;
     --menuWidth: 250px;
+
+    --font-script: 'Saturdate Script';
+    --font-serif: 'Saturdate Serif', serif;
+    --font-body-bold: 'Palanquin Dark', sans-serif;
 }
 * {
     box-sizing: border-box;
