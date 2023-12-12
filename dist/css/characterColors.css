@@ -20,6 +20,10 @@
   .dash-track.calvin,
   .dash.calvin {
     --rgb: 112,128,144; }
+  .dash-track.denali, .dash-track.denny,
+  .dash.denali,
+  .dash.denny {
+    --rgb: 206,183,39; }
   .dash-track.durante, .dash-track.dante,
   .dash.durante,
   .dash.dante {
