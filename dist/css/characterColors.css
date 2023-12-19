@@ -108,6 +108,10 @@
   .dash-track.royal,
   .dash.royal {
     --rgb: 122,223,186; }
+  .dash-track.ryvian, .dash-track.ryv,
+  .dash.ryvian,
+  .dash.ryv {
+    --rgb: 191, 88, 160; }
   .dash-track.saoirse,
   .dash.saoirse {
     --rgb: 96,108,56; }
