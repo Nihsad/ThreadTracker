@@ -40,6 +40,10 @@
   .dash-track.georgina,
   .dash.georgina {
     --rgb: 241,129,128; }
+  .dash-track.genevieve, .dash-track.genny,
+  .dash.genevieve,
+  .dash.genny {
+    --rgb: 210, 134, 180; }
   .dash-track.halsten, .dash-track.hal,
   .dash.halsten,
   .dash.hal {
