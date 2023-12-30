@@ -582,13 +582,17 @@ section {
         gap: 5px 30px;
     
         @include mq-up(sm) {
-            grid-template-columns: auto 100px;
+            grid-template-columns: auto 30px;
             align-items: center;
         }
     }
 
     &--main {
-        padding: 10px 0 10px 25px;
+        padding: 10px 25px;
+        .status--mine &,
+        .status--start & {
+            background: var(--character-bg-transparent);
+        }
 
         &::before {
             content: '';

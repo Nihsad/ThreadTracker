@@ -526,14 +526,17 @@ section form {
     gap: 5px 30px; }
     @media (min-width: 769px) {
       .thread--wrap {
-        -ms-grid-columns: auto 100px;
-        grid-template-columns: auto 100px;
+        -ms-grid-columns: auto 30px;
+        grid-template-columns: auto 30px;
         -webkit-box-align: center;
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center; } }
   .thread--main {
-    padding: 10px 0 10px 25px; }
+    padding: 10px 25px; }
+    .status--mine .thread--main,
+    .status--start .thread--main {
+      background: var(--character-bg-transparent); }
     .thread--main::before {
       content: '';
       position: absolute;
