@@ -385,10 +385,17 @@
             font-family: var(--font-serif); 
             font-size:var(--xlBody);
         }
-        dashblock{
+        dashblock {
             display: block;
             max-width: 550px;
             margin: 0 auto;
+        }
+        tag-note {
+            display: block;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
     }
 }

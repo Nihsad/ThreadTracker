@@ -590,3 +590,10 @@
   display: block;
   max-width: 550px;
   margin: 0 auto; }
+
+.character--profile-item .scroll tag-note {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase; }
