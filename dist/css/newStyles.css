@@ -6,9 +6,9 @@
   --mdgrey: rgb(180,180,180);
   --dkgrey: rgb(119, 119, 119);
   --black: rgb(75,75,75);
-  --accent: rgb(161, 185, 179);
-  --dkAccent: rgb(132, 157, 151);
-  --accent-30: rgb(161, 185, 179, 0.3);
+  --accent: rgb(159,37,37);
+  --dkAccent: rgb(116, 26, 26);
+  --accent-30: rgb(159,37,37, 0.3);
   --bg-body: var(--offwhite);
   --bg-content: var(--white);
   --bg-menu: var(--ltgrey);
