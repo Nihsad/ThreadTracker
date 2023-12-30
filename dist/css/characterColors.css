@@ -106,6 +106,10 @@
   .dash.nicolas,
   .dash.col {
     --rgb: 15,143,105; }
+  .dash-track.ophelia, .dash-track.ophie,
+  .dash.ophelia,
+  .dash.ophie {
+    --rgb: 143, 177, 202; }
   .dash-track.rhys,
   .dash.rhys {
     --rgb: 238,34,36; }
@@ -128,3 +132,6 @@
   .dash-track.wren,
   .dash.wren {
     --rgb: 166,214,176; }
+  .dash-track.zoya,
+  .dash.zoya {
+    --rgb: 99, 143, 152; }
