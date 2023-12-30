@@ -6,9 +6,9 @@
   --mdgrey: rgb(180,180,180);
   --dkgrey: rgb(119, 119, 119);
   --black: rgb(75,75,75);
-  --accent: rgb(159,37,37);
-  --dkAccent: rgb(116, 26, 26);
-  --accent-30: rgb(159,37,37, 0.3);
+  --accent: rgb(161, 185, 179);
+  --dkAccent: rgb(132, 157, 151);
+  --accent-30: rgb(161, 185, 179, 0.3);
   --bg-body: var(--offwhite);
   --bg-content: var(--white);
   --bg-menu: var(--ltgrey);
@@ -518,6 +518,12 @@ section form {
 /** Thread Lists **/
 .thread {
   margin-top: 0; }
+  .thread.status--complete {
+    opacity: 0.5;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
+    .thread.status--complete:hover {
+      opacity: 1; }
   .thread--wrap {
     display: -ms-grid;
     display: grid;
@@ -599,8 +605,8 @@ section form {
   .thread--buttons {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (30px)[3];
-    grid-template-columns: repeat(3, 30px);
+    -ms-grid-columns: (30px)[4];
+    grid-template-columns: repeat(4, 30px);
     gap: 5px;
     -webkit-box-pack: end;
     -webkit-justify-content: end;

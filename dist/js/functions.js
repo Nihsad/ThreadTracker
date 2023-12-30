@@ -105,58 +105,6 @@ function getDelay(date) {
     }
     return delayClass;
 }
-function formatOldThread(site, siteURL, status, character, feature, title, threadID, icDate, partnerObjects, type, lastPost, delayClass, directoryString) {
-    //set writing partners
-    let partners = ``;
-    let partnerClasses = ``;
-    partnerObjects.forEach((partner, i) => {
-        if(partnerObjects.length === (i + 1) && partnerObjects.length !== 1) {
-            partners += ` and `;
-        } else if(i !== 0) {
-            partners += ` `;
-            partnerClasses += ` `;
-        }
-        partners += `<a href="${siteURL}/${directoryString}${partner.id.toLowerCase().trim()}">${partner.partner.toLowerCase().trim()}</a>`;
-        partnerClasses += `partner--${partner.partner.toLowerCase().trim().replaceAll(' ', '').toLowerCase().trim()}`;
-        if(partnerObjects.length !== (i + 1)) {
-            partnerClasses += ` `;
-            if(partnerObjects.length !== 2) {
-                partners += `,`;
-            }
-        }
-    });
-
-    //set featured characters
-    let featuring = ``;
-    let ftObjects = feature.split('+').map(character => JSON.parse(character));
-    ftObjects.forEach((character, i) => {
-        if(ftObjects.length === (i + 1) && ftObjects.length !== 1) {
-            featuring += ` and `;
-        } else if(i !== 0) {
-            featuring += ` `;
-        }
-        featuring += `<a href="${siteURL}/?showuser=${character.id.toLowerCase().trim()}">${character.character.toLowerCase().trim()}</a>`;
-        if(ftObjects.length !== (i + 1) && ftObjects.length !== 2) {
-            featuring += `,`;
-        }
-    });
-    let buttons = ``;
-    if (status !== 'complete') {
-        buttons = `<button onClick="changeStatus(this)" data-status="${status}" data-id="${threadID}" data-site="${site}" data-character="${character.split('#')[0]}">Change Turn</button>
-        <button onClick="markComplete(this)" data-id="${threadID}" data-site="${site}" data-character="${character.split('#')[0]}">Mark Complete</button>`;
-    }
-    let html = `<div class="thread dash-track grid-item status--${status} ${character.split(' ')[0].toLowerCase()} delay--${delayClass} type--${type.split(' ')[0]} ${partnerClasses} grid-item"><div class="thread--wrap">
-        <a class="thread--character" href="${siteURL}/?showuser=${character.split('#')[1]}">${character.split('#')[0]}</a>
-        <a href="${siteURL}/?showtopic=${threadID}&view=getnewpost" target="_blank" class="thread--title">${title}</a>
-        <span class="thread--feature">ft. ${featuring}</span>
-        <span class="thread--partners">Writing with ${partners}</span>
-        <span class="thread--ic-date">Set <span>${icDate}</span></span>
-        <span class="thread--last-post">Last Active <span>${lastPost}</span></span>
-        <div class="thread--buttons">${buttons}</div>
-    </div></div>`;
-
-    return html;
-}
 function formatThread(site, siteURL, status, character, feature, title, threadID, icDate, partnerObjects, type, lastPost, delayClass, directoryString, snippet) {
     //set writing partners
     let partners = ``;
@@ -372,13 +320,16 @@ function addThread(e) {
 }
 function populateThreads(array, siteObject) {
     let html = ``;
-    let characters = [], partners = [], featuring = [];
+    let characters = [], partners = [], featuring = [], featureObjects;
 
     for (let i = 0; i < array.length; i++) {
         //Make Character Array
         let character = array[i].Character.toLowerCase();
         let partnerObjects = array[i].Partner.split('+').map(partner => JSON.parse(partner));
-        let featureObjects = array[i].Featuring.split('+').map(featured => JSON.parse(featured));
+
+        if(document.querySelector('.tracker--featuring')) {
+            featureObjects = array[i].Featuring.split('+').map(featured => JSON.parse(featured));
+        }
 
         if(jQuery.inArray(character, characters) == -1 && character != '') {
             characters.push(character);
@@ -388,11 +339,13 @@ function populateThreads(array, siteObject) {
                 partners.push(partner.partner);
             }
         });
-        featureObjects.forEach(featured => {
-            if(jQuery.inArray(featured.character, featuring) == -1 && featured.character != '') {
-                featuring.push(featured.character);
-            }
-        });
+        if(featureObjects) {
+            featureObjects.forEach(featured => {
+                if(jQuery.inArray(featured.character, featuring) == -1 && featured.character != '') {
+                    featuring.push(featured.character);
+                }
+            });
+        }
 
         html += formatThread(siteObject.Site,
                             siteObject.URL,
@@ -414,7 +367,9 @@ function populateThreads(array, siteObject) {
     //sort appendable filters
     characters.sort();
     partners.sort();
-    featuring.sort();
+    if(featureObjects) {
+        featuring.sort();
+    }
 
     //Append filters
     characters.forEach(character => {
@@ -423,12 +378,14 @@ function populateThreads(array, siteObject) {
     partners.forEach(partner => {
         document.querySelector('.tracker--partners').insertAdjacentHTML('beforeend', `<label><input type="checkbox" value=".partner--${partner.replaceAll(' ', '').toLowerCase().trim()}"/>${partner}</label>`);
     });
-    featuring.forEach(featured => {
-        let featuredArray = featured.toLowerCase().trim().split(' ');
-        let featuredClass = featuredArray.length > 1 ? `${featuredArray[0]}-${featuredArray[1][0]}` : featuredArray[0];
-        let featuredName = featuredArray.length > 1 ? `${featuredArray[0]} ${featuredArray[1][0]}.` : featuredArray[0];
-        document.querySelector('.tracker--featuring').insertAdjacentHTML('beforeend', `<label><input type="checkbox" value=".featured--${featuredClass}"/>${featuredName}</label>`);
-    });
+    if(featureObjects) {
+        featuring.forEach(featured => {
+            let featuredArray = featured.toLowerCase().trim().split(' ');
+            let featuredClass = featuredArray.length > 1 ? `${featuredArray[0]}-${featuredArray[1][0]}` : featuredArray[0];
+            let featuredName = featuredArray.length > 1 ? `${featuredArray[0]} ${featuredArray[1][0]}.` : featuredArray[0];
+            document.querySelector('.tracker--featuring').insertAdjacentHTML('beforeend', `<label><input type="checkbox" value=".featured--${featuredClass}"/>${featuredName}</label>`);
+        });
+    }
 }
 function debounce(fn, threshold) {
     var timeout;
@@ -999,7 +956,7 @@ function formatCharacter(data, characterFilters, baseUrl) {
         }
     }
 
-    return `<div class="${data.Character.split(' ')[0].toLowerCase()} dash-track grid-item ${characterFilters} shipped-${data.FilterShipped} gender-${data.FilterGender} ${ageFilters}">
+    return `<div class="${data.Character.split(' ')[0].toLowerCase()} dash-track grid-item ${characterFilters} shipped-${data.FilterShipped} gender-${data.FilterGender} ${ageFilters} ${data.Active}">
         <div class="character">
             <div class="character--image">
                 <img src="${data.Image}" />

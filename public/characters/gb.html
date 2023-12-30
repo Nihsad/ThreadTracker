@@ -78,6 +78,16 @@
     <div class="tracker--wrapper">
         <div class="tracker--filters">
             <div class="tracker--filter">
+                <button onClick="openFilters(this)">Active?</button>
+                <div class="tracker--filter-dropdown">
+                    <div class="tracker--filter-group claim--labels" data-filter-group="active">
+                        <label class="all"><input type="checkbox" class="all" value="" checked="">both</label>
+                        <label class="is-checked"><input type="checkbox" value=".active">yes</label>
+                        <label><input type="checkbox" value=".inactive">no</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tracker--filter">
                 <button onClick="openFilters(this)">Gender</button>
                 <div class="tracker--filter-dropdown">
                     <div class="tracker--filter-group claim--labels" data-filter-group="gender">
@@ -160,7 +170,7 @@
         const filterOptions = `.tracker--filter-group input`;
         const sorts = `.tracker--header button`;
         const gridItem = `.grid-item`;
-        const defaultShow = `:not(.status--complete)`;
+        const defaultShow = ``;
 
         //set class variables
         let $container = $('#tracker--rows');
@@ -170,7 +180,15 @@
         fetch(`https://opensheet.elk.sh/${characterSheet}/GB`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            data.sort((a, b) => {
+                if(a.Character < b.Character) {
+                    return -1;
+                } else if (a.Character > b.Character) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            })
             populateCharacters(data, filters = filters.split(', '), 'https://godlybehaviour.jcink.net/');
 
         }).then(() => {
@@ -183,7 +201,7 @@
             $container.isotope({
                 itemSelector: gridItem,
                 percentPosition: true,
-                filter: defaultShow,
+                filter: '.active',
                 getSortData: {
                     charAsc: '.name',
                     charDesc: '.name',

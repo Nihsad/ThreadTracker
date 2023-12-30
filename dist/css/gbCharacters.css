@@ -22,7 +22,8 @@
   font-size: 0.9em;
   letter-spacing: 0.05em;
   border-bottom: 2px solid var(--character-bg);
-  padding: 0 var(--spacing-xs); }
+  padding: 0 var(--spacing-xs);
+  color: var(--character-text); }
 
 .character--profile-item .scroll s {
   font-style: italic;

@@ -199,6 +199,7 @@ function configStatus(threads) {
 }
 
 function configType(threads) {
+    threads = threads.filter(thread => thread.type === 'oneshot' || thread.status.toLowerCase() !== 'complete');
     let threadCount = threads.filter(thread => thread.type === 'thread').length;
     let comms = threads.filter(thread => thread.type === 'comm').length;
     let oneshots = threads.filter(thread => thread.type === 'oneshot').length;
@@ -278,6 +279,8 @@ function configType(threads) {
 }
 
 function configPartners(threads) {
+    threads = threads.filter(thread => thread.status.toLowerCase() !== 'complete');
+    console.log(threads);
     let threadPartners = threads.map(thread => thread.partners.split('+').map(item => JSON.parse(item)));
     let partnerNames = [];
     threadPartners.forEach(thread => {
