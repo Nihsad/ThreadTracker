@@ -598,6 +598,7 @@ section {
 
     &--main {
         padding: 10px 25px;
+        
         .status--mine &,
         .status--start & {
             background: var(--character-bg-transparent);

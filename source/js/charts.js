@@ -14,29 +14,49 @@ function loadThreads(data) {
     return threads;
 }
 
-function loadCharts(threads) {
-    let timeChart = new ApexCharts(document.querySelector(".chart--time"), configTime(threads));
-    timeChart.render();
-    let statusChart = new ApexCharts(document.querySelector(".chart--status"), configStatus(threads));
-    statusChart.render();
+function configCharts(threads) {
+    //owning
+    let timeChartThread = new ApexCharts(document.querySelector(".chart--time-thread"), configTime(threads, 'thread', 'mine'));
+    timeChartThread.render();
+    let timeChartComm = new ApexCharts(document.querySelector(".chart--time-comm"), configTime(threads, 'comm', 'mine'));
+    timeChartComm.render();
+
+    //waiting
+    let timeChartThreadWait = new ApexCharts(document.querySelector(".chart--time-thread-wait"), configTime(threads, 'thread', 'theirs'));
+    timeChartThreadWait.render();
+    let timeChartCommWait = new ApexCharts(document.querySelector(".chart--time-comm-wait"), configTime(threads, 'comm'));
+    timeChartCommWait.render();
+
+    //status
+    let statusChartThread = new ApexCharts(document.querySelector(".chart--status-thread"), configStatus(threads, 'thread'));
+    statusChartThread.render();
+    let statusChartComm = new ApexCharts(document.querySelector(".chart--status-comm"), configStatus(threads, 'comm'));
+    statusChartComm.render();
+
+    //type
     let typeChart = new ApexCharts(document.querySelector(".chart--type"), configType(threads));
     typeChart.render();
+    
+    //partner
     let partnerChart = new ApexCharts(document.querySelector(".chart--partner"), configPartners(threads));
     partnerChart.render();
+}
+
+function loadCharts(threads) {
+    configCharts(threads);
 
     window.addEventListener('resize', () => {
-        let timeChart = new ApexCharts(document.querySelector(".chart--time"), configTime(threads));
-        timeChart.render();
-        let statusChart = new ApexCharts(document.querySelector(".chart--status"), configStatus(threads));
-        statusChart.render();
-        let typeChart = new ApexCharts(document.querySelector(".chart--type"), configType(threads));
-        typeChart.render();
-        let partnerChart = new ApexCharts(document.querySelector(".chart--partner"), configPartners(threads));
-        partnerChart.render();
+        configCharts(threads);
     });
 }
 
-function configTime(threads) {
+function configTime(threads, type = null, turn = null) {
+    if(type) {
+        threads = threads.filter(item => item.type.toLowerCase().trim() === type.toLowerCase().trim());
+    }
+    if(turn) {
+        threads = threads.filter(item => item.status.toLowerCase().trim() === turn.toLowerCase().trim());
+    }
     let activeThreads = threads.filter(item => item.status !== 'complete');
     let recent = activeThreads.filter(thread => thread.delay === 'okay').length;
     let week = activeThreads.filter(thread => thread.delay === 'week').length;
@@ -119,7 +139,10 @@ function configTime(threads) {
     return timeConfig;
 }
 
-function configStatus(threads) {
+function configStatus(threads, type = null) {
+    if(type) {
+        threads = threads.filter(item => item.type.toLowerCase().trim() === type.toLowerCase().trim());
+    }
     let owing = threads.filter(thread => thread.status === 'mine' || thread.status === 'start').length;
     let active = threads.filter(thread => thread.status === 'theirs' || thread.status === 'upcoming').length;
     let complete = threads.filter(thread => thread.status === 'complete').length;
