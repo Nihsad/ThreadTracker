@@ -11,6 +11,7 @@
     --accent: rgb(159,37,37);
     --dkAccent: rgb(116, 26, 26);
     --accent-30: rgb(159,37,37, 0.3);
+    --accent-60: rgb(159,37,37,0.6);
 
     --bg-body: var(--offwhite);
     --bg-content: var(--white);
@@ -28,7 +29,7 @@
     --marker-accent: var(--accent);
 
     --font-body: 'Inter', sans-serif;
-    --font-accent: 'Courier Prime', monospace;
+    --font-accent: 'Palanquin Dark', sans-serif;
     --menuWidth: 250px;
 }
 * {
@@ -997,4 +998,28 @@ section {
 }
 body.modal-open {
     overflow: hidden;
+}
+
+.site--box {
+    width:80%;
+    margin:40px;
+}
+
+.site--links {
+    width:100%;
+    padding:30px;
+    text-align:center;
+    font-size:40px;
+    background:var(--accent);
+    color:var(--text-on-accent);
+    border-radius:10px;
+    letter-spacing:2px;
+    margin:10px;
+    transition-duration:0.2s;
+}
+
+.site--links:hover {
+    background:var(--accent-60);
+    letter-spacing:6px;
+    transition-duration:0.2s;
 }
