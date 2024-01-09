@@ -25,7 +25,7 @@
   --text-secondary: var(--black);
   --marker-accent: var(--accent);
   --font-body: 'Inter', sans-serif;
-  --font-accent: 'Palanquin Dark', sans-serif;
+  --font-accent: 'Courier Prime', monospace;
   --menuWidth: 250px; }
 
 * {

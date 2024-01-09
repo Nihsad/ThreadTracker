@@ -24,6 +24,9 @@
   .dash-track.calvin,
   .dash.calvin {
     --rgb: 112,128,144; }
+  .dash-track.case,
+  .dash.case {
+    --rgb: 114, 144, 105; }
   .dash-track.denali, .dash-track.denny,
   .dash.denali,
   .dash.denny {

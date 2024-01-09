@@ -11,7 +11,7 @@
   --text-body: var(--dkgrey);
   --text-on-accent: var(--offwhite);
   --font-body: 'Palanquin', sans-serif;
-  --font-accent: 'Palanquin Dark', sans-serif;
+  --font-accent: 'Courier Prime', monospace;
   --menuWidth: 250px; }
 
 * {
