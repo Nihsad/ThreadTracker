@@ -133,6 +133,10 @@
   .dash-track.teimyn,
   .dash.teimyn {
     --rgb: 249,35,47; }
+  .dash-track.thalia, .dash-track.lia,
+  .dash.thalia,
+  .dash.lia {
+    --rgb: 217,170,2; }
   .dash-track.thealdrae,
   .dash.thealdrae {
     --rgb: 62,165,118; }
