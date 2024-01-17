@@ -1,0 +1,213 @@
+.lux-track,
+.lux {
+    --accent: rgb(var(--rgb));
+    --dkAccent: rgb(var(--rgb-dark, var(--rgb)));
+
+    .totl &,
+    &.gb tag-wrap,
+    &.gb tag-comm,
+    &.gb tag-social {
+        //shared
+        --accent: rgb(var(--rgb-dark, var(--rgb)));
+
+        //gb only
+        --accent-20: rgba(var(--rgb), 0.2);
+        --bg-color: var(--accent);
+        --bg-color-transparent: var(--accent-20);
+        --text-color: var(--accent);
+        --border-color: var(--accent);
+
+        //gb:et only
+        --accent-30: rgba(var(--rgb-dark, var(--rgb)), 0.3);
+        --accent-50: rgba(var(--rgb-dark, var(--rgb)), 0.5);
+        --accent-90: rgba(var(--rgb-dark, var(--rgb)), 0.8);
+    }
+    
+    &.ailbhe {
+        --rgb: 232,128,101;
+    }
+    
+    &.alexander,
+    &.alex {
+        --rgb: 172,83,65;
+    }
+    
+    &.ariel {
+        --rgb: 183,49,65;
+    }
+    
+    &.artemisia {
+        --rgb: 224,180,132;
+    }
+
+    &.bellamy,
+    &.bells {
+        --rgb: 148,197,7;
+    }
+    
+    &.bryn {
+        --rgb: 187,34,119;
+    }
+    
+    &.calvin {
+        --rgb: 112,128,144;
+    }
+
+    &.case {
+        --rgb: 114, 144, 105;
+    }
+    
+    &.denali,
+    &.denny {
+        --rgb: 206,183,39;
+    }
+    
+    &.durante,
+    &.dante {
+        --rgb: 36,178,173;
+    }
+    
+    &.eirian {
+        --rgb: 29,116,222;
+    }
+    
+    &.eliane {
+        --rgb: 251,189,102;
+    }
+    
+    &.felix {
+        --rgb: 179,120,46;
+    }
+    
+    &.georgina {
+        --rgb: 241,129,128;
+    }
+
+    &.genevieve,
+    &.evie {
+        --rgb: 210,134,180;
+    }
+
+    &.halsten,
+    &.hal {
+        --rgb: 120,46,54;
+    }
+    
+    &.hugo {
+        --rgb: 171,164,143;
+    }
+    
+    &.inoue,
+    &.naoki {
+        --rgb: 172,216,170;
+    }
+    
+    &.islay {
+        --rgb: 121,86,99;
+    }
+    
+    &.jace {
+        --rgb: 153,114,187;
+    }
+    
+    &.keilani {
+        --rgb: 154,140,152;
+    }
+    
+    &.kharim {
+        --rgb: 247,181,56;
+    }
+    
+    &.kit {
+        --rgb: 253,177,113;
+    }
+    
+    &.kylian {
+        --rgb: 86,109,176;
+    }
+    
+    &.laurie {
+        --rgb: 173,181,211;
+    }
+    
+    &.levi,
+    &.leviathan {
+        --rgb: 95,159,71;
+    }
+
+    &.liam {
+        --rgb: 166,146,175;
+    }
+    
+    &.lochlann {
+        --rgb: 158,204,209;
+    }
+    
+    &.luciano {
+        --rgb: 219,176,162;
+    }
+    
+    &.maeve {
+        --rgb: 201,158,230;
+    }
+    
+    &.magalie {
+        --rgb: 216,97,38;
+    }
+    
+    &.max {
+        --rgb: 63,201,194;
+    }
+    
+    &.michalis,
+    &.mik {
+        --rgb: 147,92,132;
+    }
+    
+    &.nicolas,
+    &.col {
+        --rgb: 15,143,105;
+    }
+
+    &.ophelia,
+    &.ophie {
+        --rgb: 143,177,202;
+    }
+    
+    &.rhys {
+        --rgb: 194,93,43;
+    }
+    
+    &.royal {
+        --rgb: 122,223,186;
+    }
+    
+    &.ryvian,
+    &.ryv {
+        --rgb: 191,88,160;
+    }
+    &.saoirse {
+        --rgb: 96,108,56;
+    }
+    
+    &.teimyn {
+        --rgb: 249,35,47;
+    }
+    
+    &.thalia, 
+    &.lia {
+        --rgb: 217,170,2;
+    }
+
+    &.thealdrae {
+        --rgb: 62,165,118;
+    }
+    
+    &.wren {
+        --rgb: 166,214,176;
+    }
+
+    &.zoya {
+        --rgb: 99,143,152;
+    }
+}

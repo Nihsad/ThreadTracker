@@ -1,0 +1,166 @@
+.lux-track,
+.lux {
+  --accent: rgb(var(--rgb));
+  --dkAccent: rgb(var(--rgb-dark, var(--rgb))); }
+  .totl .lux-track,
+  .lux-track.gb tag-wrap,
+  .lux-track.gb tag-comm,
+  .lux-track.gb tag-social, .totl
+  .lux,
+  .lux.gb tag-wrap,
+  .lux.gb tag-comm,
+  .lux.gb tag-social {
+    --accent: rgb(var(--rgb-dark, var(--rgb)));
+    --accent-20: rgba(var(--rgb), 0.2);
+    --bg-color: var(--accent);
+    --bg-color-transparent: var(--accent-20);
+    --text-color: var(--accent);
+    --border-color: var(--accent);
+    --accent-30: rgba(var(--rgb-dark, var(--rgb)), 0.3);
+    --accent-50: rgba(var(--rgb-dark, var(--rgb)), 0.5);
+    --accent-90: rgba(var(--rgb-dark, var(--rgb)), 0.8); }
+  .lux-track.ailbhe,
+  .lux.ailbhe {
+    --rgb: 232,128,101; }
+  .lux-track.alexander, .lux-track.alex,
+  .lux.alexander,
+  .lux.alex {
+    --rgb: 172,83,65; }
+  .lux-track.ariel,
+  .lux.ariel {
+    --rgb: 183,49,65; }
+  .lux-track.artemisia,
+  .lux.artemisia {
+    --rgb: 224,180,132; }
+  .lux-track.bellamy, .lux-track.bells,
+  .lux.bellamy,
+  .lux.bells {
+    --rgb: 148,197,7; }
+  .lux-track.bryn,
+  .lux.bryn {
+    --rgb: 187,34,119; }
+  .lux-track.calvin,
+  .lux.calvin {
+    --rgb: 112,128,144; }
+  .lux-track.case,
+  .lux.case {
+    --rgb: 114, 144, 105; }
+  .lux-track.denali, .lux-track.denny,
+  .lux.denali,
+  .lux.denny {
+    --rgb: 206,183,39; }
+  .lux-track.durante, .lux-track.dante,
+  .lux.durante,
+  .lux.dante {
+    --rgb: 36,178,173; }
+  .lux-track.eirian,
+  .lux.eirian {
+    --rgb: 29,116,222; }
+  .lux-track.eliane,
+  .lux.eliane {
+    --rgb: 251,189,102; }
+  .lux-track.felix,
+  .lux.felix {
+    --rgb: 179,120,46; }
+  .lux-track.georgina,
+  .lux.georgina {
+    --rgb: 241,129,128; }
+  .lux-track.genevieve, .lux-track.evie,
+  .lux.genevieve,
+  .lux.evie {
+    --rgb: 210,134,180; }
+  .lux-track.halsten, .lux-track.hal,
+  .lux.halsten,
+  .lux.hal {
+    --rgb: 120,46,54; }
+  .lux-track.hugo,
+  .lux.hugo {
+    --rgb: 171,164,143; }
+  .lux-track.inoue, .lux-track.naoki,
+  .lux.inoue,
+  .lux.naoki {
+    --rgb: 172,216,170; }
+  .lux-track.islay,
+  .lux.islay {
+    --rgb: 121,86,99; }
+  .lux-track.jace,
+  .lux.jace {
+    --rgb: 153,114,187; }
+  .lux-track.keilani,
+  .lux.keilani {
+    --rgb: 154,140,152; }
+  .lux-track.kharim,
+  .lux.kharim {
+    --rgb: 247,181,56; }
+  .lux-track.kit,
+  .lux.kit {
+    --rgb: 253,177,113; }
+  .lux-track.kylian,
+  .lux.kylian {
+    --rgb: 86,109,176; }
+  .lux-track.laurie,
+  .lux.laurie {
+    --rgb: 173,181,211; }
+  .lux-track.levi, .lux-track.leviathan,
+  .lux.levi,
+  .lux.leviathan {
+    --rgb: 95,159,71; }
+  .lux-track.liam,
+  .lux.liam {
+    --rgb: 166,146,175; }
+  .lux-track.lochlann,
+  .lux.lochlann {
+    --rgb: 158,204,209; }
+  .lux-track.luciano,
+  .lux.luciano {
+    --rgb: 219,176,162; }
+  .lux-track.maeve,
+  .lux.maeve {
+    --rgb: 201,158,230; }
+  .lux-track.magalie,
+  .lux.magalie {
+    --rgb: 216,97,38; }
+  .lux-track.max,
+  .lux.max {
+    --rgb: 63,201,194; }
+  .lux-track.michalis, .lux-track.mik,
+  .lux.michalis,
+  .lux.mik {
+    --rgb: 147,92,132; }
+  .lux-track.nicolas, .lux-track.col,
+  .lux.nicolas,
+  .lux.col {
+    --rgb: 15,143,105; }
+  .lux-track.ophelia, .lux-track.ophie,
+  .lux.ophelia,
+  .lux.ophie {
+    --rgb: 143,177,202; }
+  .lux-track.rhys,
+  .lux.rhys {
+    --rgb: 194,93,43; }
+  .lux-track.royal,
+  .lux.royal {
+    --rgb: 122,223,186; }
+  .lux-track.ryvian, .lux-track.ryv,
+  .lux.ryvian,
+  .lux.ryv {
+    --rgb: 191,88,160; }
+  .lux-track.saoirse,
+  .lux.saoirse {
+    --rgb: 96,108,56; }
+  .lux-track.teimyn,
+  .lux.teimyn {
+    --rgb: 249,35,47; }
+  .lux-track.thalia, .lux-track.lia,
+  .lux.thalia,
+  .lux.lia {
+    --rgb: 217,170,2; }
+  .lux-track.thealdrae,
+  .lux.thealdrae {
+    --rgb: 62,165,118; }
+  .lux-track.wren,
+  .lux.wren {
+    --rgb: 166,214,176; }
+  .lux-track.zoya,
+  .lux.zoya {
+    --rgb: 99,143,152; }
