@@ -3,7 +3,6 @@
     --accent: rgb(var(--rgb));
     --dkAccent: rgb(var(--rgb-dark, var(--rgb)));
 
-    .totl &,
     &.gb tag-wrap,
     &.gb tag-comm,
     &.gb tag-social {
@@ -22,136 +21,186 @@
         --accent-50: rgba(var(--rgb-dark, var(--rgb)), 0.5);
         --accent-90: rgba(var(--rgb-dark, var(--rgb)), 0.8);
     }
+
+    &.gb tag-image.dashpost img {
+        border: 0;
+  	    overflow: hidden;
+  	    border-radius: 3px;
+	    content: var(--img);
+    }
     
-    &.ailbhe {
+    &.ailbhe,
+    &.gb-241 {
         --rgb: 232,128,101;
     }
     
     &.alexander,
-    &.alex {
+    &.alex,
+    &.gb-21 {
         --rgb: 172,83,65;
     }
     
-    &.ariel {
+    &.ariel,
+    &.gb-297 {
         --rgb: 183,49,65;
+        --img: url('https://nypost.com/wp-content/uploads/sites/2/2022/10/luke-grimes-cover.jpg');
     }
     
-    &.artemisia {
+    &.artemisia,
+    &.gb-218 {
         --rgb: 224,180,132;
+        --img: url('https://66.media.tumblr.com/6be1569258e0ba176130284872618260/9b0d5e949facfffa-7c/s540x810/9379464984d35fa76d11ad3620eb7ae5be75a9a4.gif');
     }
 
     &.bellamy,
-    &.bells {
+    &.bells,
+    &.gb-496 {
         --rgb: 148,197,7;
     }
     
-    &.bryn {
+    &.bryn,
+    &.gb-135 {
         --rgb: 187,34,119;
     }
     
-    &.calvin {
+    &.calvin,
+    &.gb-54 {
         --rgb: 112,128,144;
+        --img: url('https://66.media.tumblr.com/44d7071974bddf8fe9f8abf36f6c6e8f/tumblr_inline_pprhtse5Ze1rooebp_540.gif');
     }
 
-    &.case {
+    &.case,
+    &.gb-585 {
         --rgb: 114, 144, 105;
+        --img: url('https://www.malemodelscene.net/wp-content/uploads/2011/09/Jacey-Elthalion-for-Reserved-Fall-Winter-2011.12-MaleModelSceneNet-05a.jpg');
     }
     
     &.denali,
-    &.denny {
+    &.denny,
+    &.gb-265 {
         --rgb: 206,183,39;
     }
     
     &.durante,
-    &.dante {
+    &.dante,
+    &.gb-179 {
         --rgb: 36,178,173;
     }
     
-    &.eirian {
+    &.eirian,
+    &.gb-228 {
         --rgb: 29,116,222;
     }
     
-    &.eliane {
+    &.eliane,
+    &.gb-296 {
         --rgb: 251,189,102;
     }
     
-    &.felix {
+    &.felix,
+    &.gb-93 {
         --rgb: 179,120,46;
     }
+
+    &.florian,
+    &.gb-480 {
+        --rgb: 1,1,1;
+    }
     
-    &.georgina {
+    &.georgina,
+    &.gb-48 {
         --rgb: 241,129,128;
     }
 
     &.genevieve,
-    &.evie {
+    &.evie,
+    &.gb-487 {
         --rgb: 210,134,180;
+        --img: url('https://pbs.twimg.com/media/DjORTCzU0AA4Xw1.jpg');
     }
 
     &.halsten,
-    &.hal {
+    &.hal,
+    &.gb-456 {
         --rgb: 120,46,54;
+        --img: url('https://64.media.tumblr.com/148deecfee01187574f508c2d7b2dc99/tumblr_inline_opd7q0fOFK1rifr4k_540.gif');
     }
     
-    &.hugo {
+    &.hugo,
+    &.gb-303 {
         --rgb: 171,164,143;
     }
     
     &.inoue,
-    &.naoki {
+    &.naoki,
+    &.gb-75 {
         --rgb: 172,216,170;
     }
     
-    &.islay {
+    &.islay,
+    &.gb-354 {
         --rgb: 121,86,99;
     }
     
-    &.jace {
+    &.jace,
+    &.gb-356 {
         --rgb: 153,114,187;
     }
     
-    &.keilani {
+    &.keilani,
+    &.gb-77 {
         --rgb: 154,140,152;
     }
     
-    &.kharim {
+    &.kharim,
+    &.gb-29 {
         --rgb: 247,181,56;
     }
     
-    &.kit {
+    &.kit,
+    &.gb-219 {
         --rgb: 253,177,113;
     }
     
-    &.kylian {
+    &.kylian,
+    &.gb-446 {
         --rgb: 86,109,176;
+        --img: url('https://64.media.tumblr.com/59c2a89f58f27e53fcf5c8289fc1d175/30acca470ca69808-e4/s1280x1920/4b83fbeccaa6ed7a846489e7236c3e14769b1e8b.png');
     }
     
-    &.laurie {
+    &.laurie,
+    &.gb-278 {
         --rgb: 173,181,211;
     }
     
     &.levi,
-    &.leviathan {
+    &.leviathan,
+    &.gb-410 {
         --rgb: 95,159,71;
     }
 
-    &.liam {
+    &.liam,
+    &.gb-443 {
         --rgb: 166,146,175;
     }
     
-    &.lochlann {
+    &.lochlann,
+    &.gb-51 {
         --rgb: 158,204,209;
+        --img: url('https://pbs.twimg.com/media/DZ9TwRmX0AUWxlN.jpg');
     }
     
     &.luciano {
         --rgb: 219,176,162;
     }
     
-    &.maeve {
+    &.maeve,
+    &.gb-81 {
         --rgb: 201,158,230;
     }
     
-    &.magalie {
+    &.magalie,
+    &.gb-141 {
         --rgb: 216,97,38;
     }
     
@@ -160,25 +209,32 @@
     }
     
     &.michalis,
-    &.mik {
+    &.mik,
+    &.gb-158 {
         --rgb: 147,92,132;
+        --img: url('https://images.mubicdn.net/images/cast_member/835761/cache-619273-1607929424/image-w856.jpg');
     }
     
     &.nicolas,
-    &.col {
+    &.col,
+    &.gb-378 {
         --rgb: 15,143,105;
     }
 
     &.ophelia,
-    &.ophie {
+    &.ophie,
+    &.gb-499 {
         --rgb: 143,177,202;
     }
     
-    &.rhys {
+    &.rhys,
+    &.gb-10 {
         --rgb: 194,93,43;
+        --img: url('https://64.media.tumblr.com/7817f40d8c225e5cf2759cc1ce29c83f/458ba54d4395c75e-0b/s540x810/b4a7118a51f363b56fde843cf32e3539cd2400dd.gif');
     }
     
-    &.royal {
+    &.royal,
+    &.gb-83 {
         --rgb: 122,223,186;
     }
     
@@ -186,7 +242,8 @@
     &.ryv {
         --rgb: 191,88,160;
     }
-    &.saoirse {
+    &.saoirse,
+    &.gb-40 {
         --rgb: 96,108,56;
     }
     
@@ -195,8 +252,10 @@
     }
     
     &.thalia, 
-    &.lia {
+    &.lia,
+    &.gb-609 {
         --rgb: 217,170,2;
+        --img: url('https://64.media.tumblr.com/56e5ea4fc52a6da9d5f8fa7fc7e93ee5/6d9fc7978cb18a80-9b/s400x600/b9815def082563d9fe7604cd9e1a57396dd9348d.gif');
     }
 
     &.thealdrae {
@@ -207,7 +266,9 @@
         --rgb: 166,214,176;
     }
 
-    &.zoya {
+    &.zoya,
+    &.gb-497 {
         --rgb: 99,143,152;
+        --img: url('https://64.media.tumblr.com/b563290613a94c7f9259bcd5aeee190c/tumblr_mi42dsQ5kw1qbz8aro2_r1_250.gif');
     }
 }
