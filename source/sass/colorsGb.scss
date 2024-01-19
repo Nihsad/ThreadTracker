@@ -1,9 +1,12 @@
 .lux-track,
 .lux,
 .parent-9 {
-    --accent: rgb(var(--rgb));
-    --dkAccent: rgb(var(--rgb-dark, var(--rgb)));
-
+    &,
+    .light &,
+    .dark & {
+        --accent: rgb(var(--rgb));
+        --dkAccent: rgb(var(--rgb-dark, var(--rgb)));
+    }
     &.gb tag-wrap,
     &.gb tag-comm,
     &.gb tag-social {
