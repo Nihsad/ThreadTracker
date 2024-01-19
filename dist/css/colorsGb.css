@@ -23,15 +23,61 @@
 .parent-9.gb tag-wrap,
 .parent-9.gb tag-comm,
 .parent-9.gb tag-social {
-  --accent: rgb(var(--rgb-dark, var(--rgb)));
   --accent-20: rgba(var(--rgb), 0.2);
   --bg-color: var(--accent);
   --bg-color-transparent: var(--accent-20);
   --text-color: var(--accent);
   --border-color: var(--accent);
-  --accent-30: rgba(var(--rgb-dark, var(--rgb)), 0.3);
-  --accent-50: rgba(var(--rgb-dark, var(--rgb)), 0.5);
-  --accent-90: rgba(var(--rgb-dark, var(--rgb)), 0.8); }
+  --border-accent: var(--accent);
+  --bg-accent: var(--accent);
+  --bg-accent-solid: var(--accent);
+  --bg-accent-30: var(--accent-30);
+  --bg-accent-50: var(--accent-50);
+  --text-accent: var(--accent); }
+  .light .lux-track.gb tag-wrap, .light
+  .lux-track.gb tag-comm, .light
+  .lux-track.gb tag-social, .light
+  .lux.gb tag-wrap, .light
+  .lux.gb tag-comm, .light
+  .lux.gb tag-social, .light
+  .parent-9.gb tag-wrap, .light
+  .parent-9.gb tag-comm, .light
+  .parent-9.gb tag-social {
+    --accent: rgb(var(--rgb-dark, var(--rgb))); }
+  body:not(.light) .lux-track.gb tag-wrap, body:not(.light)
+  .lux-track.gb tag-comm, body:not(.light)
+  .lux-track.gb tag-social, body:not(.light)
+  .lux.gb tag-wrap, body:not(.light)
+  .lux.gb tag-comm, body:not(.light)
+  .lux.gb tag-social, body:not(.light)
+  .parent-9.gb tag-wrap, body:not(.light)
+  .parent-9.gb tag-comm, body:not(.light)
+  .parent-9.gb tag-social {
+    --accent: rgb(var(--rgb)); }
+  .light .lux-track.gb tag-wrap, .light
+  .lux-track.gb tag-comm, .light
+  .lux-track.gb tag-social, .light
+  .lux.gb tag-wrap, .light
+  .lux.gb tag-comm, .light
+  .lux.gb tag-social, .light
+  .parent-9.gb tag-wrap, .light
+  .parent-9.gb tag-comm, .light
+  .parent-9.gb tag-social {
+    --accent-30: rgba(var(--rgb-dark, var(--rgb)), 0.3);
+    --accent-50: rgba(var(--rgb-dark, var(--rgb)), 0.5);
+    --accent-90: rgba(var(--rgb-dark, var(--rgb)), 0.8); }
+  body:not(.light) .lux-track.gb tag-wrap, body:not(.light)
+  .lux-track.gb tag-comm, body:not(.light)
+  .lux-track.gb tag-social, body:not(.light)
+  .lux.gb tag-wrap, body:not(.light)
+  .lux.gb tag-comm, body:not(.light)
+  .lux.gb tag-social, body:not(.light)
+  .parent-9.gb tag-wrap, body:not(.light)
+  .parent-9.gb tag-comm, body:not(.light)
+  .parent-9.gb tag-social {
+    --accent-30: rgba(var(--rgb), 0.3);
+    --accent-50: rgba(var(--rgb), 0.5);
+    --accent-90: rgba(var(--rgb), 0.8); }
 
 .lux-track.gb tag-image.dashpost img,
 .lux.gb tag-image.dashpost img,
