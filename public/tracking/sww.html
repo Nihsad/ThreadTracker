@@ -2,7 +2,7 @@
 <html>
     <head>
         
-<title>Dash | Godly Behaviour Threads (Archived)</title>
+<title>Dash | Southern Winds Weyr Threads</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!--Styles-->
@@ -71,7 +71,7 @@
             <div class="tracker--filter">
                 <button onClick="openFilters(this)">Character</button>
                 <div class="tracker--filter-dropdown">
-                    <div class="tracker--filter-group claim--labels tracker--characters" data-filter-group="charater">
+                    <div class="tracker--filter-group claim--labels tracker--characters" data-filter-group="character">
                         <label class="all is-checked"><input type="checkbox" class="all" value="" checked="">all</label>
                     </div>
                 </div>
@@ -81,6 +81,41 @@
                 <div class="tracker--filter-dropdown">
                     <div class="tracker--filter-group claim--labels tracker--partners" data-filter-group="partner">
                         <label class="all is-checked"><input type="checkbox" class="all" value="" checked="">all</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tracker--filter">
+                <button onClick="openFilters(this)">Featuring</button>
+                <div class="tracker--filter-dropdown">
+                    <div class="tracker--filter-group claim--labels tracker--featuring" data-filter-group="featuring">
+                        <label class="all is-checked"><input type="checkbox" class="all" value="" checked="">all</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tracker--filter">
+                <button onClick="openFilters(this)">Last Reply</button>
+                <div class="tracker--filter-dropdown">
+                    <div class="tracker--filter-group claim--labels" data-filter-group="lastreply">
+                        <label class="all is-checked"><input type="checkbox" class="all" value="" checked="">any time</label>
+                        <label><input type="checkbox" value=".delay--okay">&lt; one week</label>
+                        <label><input type="checkbox" value=".delay--week">&gt; one week</label>
+                        <label><input type="checkbox" value=".delay--month">&gt; one month</label>
+                        <label><input type="checkbox" value=".delay--quarter">&gt; three months</label>
+                        <label><input type="checkbox" value=".delay--half">&gt; six months</label>
+                        <label><input type="checkbox" value=".delay--year">&gt; a year</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tracker--filter">
+                <button onClick="openFilters(this)">Status</button>
+                <div class="tracker--filter-dropdown">
+                    <div class="tracker--filter-group claim--labels" data-filter-group="status">
+                        <label class="all is-checked"><input type="checkbox" class="all" value="" checked="">all</label>
+                        <label><input type="checkbox" value=".status--mine">my turn</label>
+                        <label><input type="checkbox" value=".status--theirs">their turn</label>
+                        <label><input type="checkbox" value=".status--start">to start</label>
+                        <label><input type="checkbox" value=".status--planned">planned</label>
+                        <label class="completed-label"><input type="checkbox" value=".status--complete">completed</label>
                     </div>
                 </div>
             </div>
@@ -103,7 +138,7 @@
     </div>
     <script>
         //set overall variables
-        let siteName = 'Godly Behaviour';
+        let siteName = 'Southern Winds Weyr';
         const typeSearch = `#quicksearch`;
         const blockTitle = `.thread--title`;
         const visible = `is-visible`;
@@ -123,7 +158,7 @@
             .then((response) => response.json())
             .then((siteData) => {
                 let siteObject = siteData.filter(item => item.Site.toLowerCase().trim() === siteName.toLowerCase().trim())[0];
-                let threads = prepArchivedThreads(threadData, siteObject.Site);
+                let threads = prepThreads(threadData, siteObject.Site);
                 populateThreads(threads, siteObject);
             }).then(() => {
             //initialize isotope
