@@ -2,12 +2,12 @@
 <html>
     <head>
         
-<title>Lux | Godly Behaviour Characters</title>
+<title>Dash | Southern Winds Weyr Characters</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!--Styles-->
 <link rel="stylesheet" href="../../dist/css/newStyles.css" />
-<link rel="stylesheet" href="https://luxacious11.github.io/dist/css/characters.css" />
+<link rel="stylesheet" href="../../dist/css/characterColors.css" />
 
 <!--Fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
 
 <!--Scripts-->
 <script type='text/javascript' src='../../dist/js/functions.js'></script>
-        <link rel="stylesheet" href="../../dist/css/totlCharacters.css" />
+        <link rel="stylesheet" href="../../dist/css/gbCharacters.css" />
     </head>
     <body>
         <nav>
@@ -46,7 +46,7 @@
             </ul>
         </li>
         <li>
-            <a href="../../public/sites/gb.html">Godly Behaviour</a>
+            <a href="../../public/tracking/gb.html">Godly Behaviour</a>
             <ul>
                 <li><a href="../../public/tracking/gb.html">Threads</a></li>
                 <li><a href="../../public/tracking/gb-archived.html">Archived Threads</a></li>
@@ -55,21 +55,12 @@
             </ul>
         </li>
         <li>
-            <a href="../../public/sites/legends.html">Legends</a>
+            <a href="../../public/tracking/sww.html">Southern Winds Weyr</a>
             <ul>
-                <li><a href="../../public/tracking/legends.html">Threads</a></li>
-                <li><a href="../../public/tracking/legends-archived.html">Archived Threads</a></li>
-                <li><a href="../../public/charts/legends.html">Charts</a></li>
-                <li><a href="../../public/characters/legends.html">Characters</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="../../public/sites/totl.html">Turn on the Light</a>
-            <ul>
-                <li><a href="../../public/tracking/totl.html">Threads</a></li>
-                <li><a href="../../public/tracking/totl-archived.html">Archived Threads</a></li>
-                <li><a href="../../public/charts/totl.html">Charts</a></li>
-                <li><a href="../../public/characters/totl.html">Characters</a></li>
+                <li><a href="../../public/tracking/sww.html">Threads</a></li>
+                <li><a href="../../public/tracking/sww-archived.html">Archived Threads</a></li>
+                <!-- <li><a href="../../public/charts/gb.html">Charts</a></li>
+                <li><a href="../../public/characters/gb.html">Characters</a></li> -->
             </ul>
         </li>
     </ul>
@@ -86,6 +77,16 @@
     </div>
     <div class="tracker--wrapper">
         <div class="tracker--filters">
+            <div class="tracker--filter">
+                <button onClick="openFilters(this)">Active?</button>
+                <div class="tracker--filter-dropdown">
+                    <div class="tracker--filter-group claim--labels" data-filter-group="active">
+                        <label class="all"><input type="checkbox" class="all" value="" checked="">both</label>
+                        <label class="is-checked"><input type="checkbox" value=".active">yes</label>
+                        <label><input type="checkbox" value=".inactive">no</label>
+                    </div>
+                </div>
+            </div>
             <div class="tracker--filter">
                 <button onClick="openFilters(this)">Gender</button>
                 <div class="tracker--filter-dropdown">
@@ -128,23 +129,6 @@
             </div>
             
             
-                <div class="tracker--filter">
-    <button onClick="openFilters(this)">Shipped With</button>
-    <div class="tracker--filter-dropdown">
-        <div class="tracker--filter-group claim--labels" data-filter-group="FilterShippedWith">
-            <label class="all is-checked"><input type="checkbox" class="all" value="" checked="">all</label>
-        </div>
-    </div>
-</div>
-<div class="tracker--filter">
-    <button onClick="openFilters(this)">Blood Status</button>
-    <div class="tracker--filter-dropdown">
-        <div class="tracker--filter-group claim--labels" data-filter-group="FilterBloodStatus">
-            <label class="all is-checked"><input type="checkbox" class="all" value="" checked="">all</label>
-        </div>
-    </div>
-</div>
-            
         </div>
         <div class="tracker--content">
             <div id="tracker--rows" class="tracker--threads"></div>
@@ -159,18 +143,26 @@
         const filterOptions = `.tracker--filter-group input`;
         const sorts = `.tracker--header button`;
         const gridItem = `.grid-item`;
-        const defaultShow = `:not(.status--complete)`;
+        const defaultShow = ``;
 
         //set class variables
         let $container = $('#tracker--rows');
-        let filters = "FilterShippedWith, FilterBloodStatus";
+        let filters = "FilterSpecies, FilterShippedWith";
         console.log(filters.split(', '));
 
-        fetch(`https://opensheet.elk.sh/${characterSheet}/TOTL`)
+        fetch(`https://opensheet.elk.sh/${characterSheet}/SWW`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
-            populateCharacters(data, filters = filters.split(', '), 'https://totl.jcink.net/');
+            data.sort((a, b) => {
+                if(a.Character < b.Character) {
+                    return -1;
+                } else if (a.Character > b.Character) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            })
+            populateCharacters(data, filters = filters.split(', '), 'https://southernwindsweyr.jcink.net/');
 
         }).then(() => {
             //initialize isotope
@@ -182,7 +174,7 @@
             $container.isotope({
                 itemSelector: gridItem,
                 percentPosition: true,
-                filter: defaultShow,
+                filter: '.active',
                 getSortData: {
                     charAsc: '.name',
                     charDesc: '.name',

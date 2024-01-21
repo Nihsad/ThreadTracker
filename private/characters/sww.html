@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../source/templates/head.html', {
+            "prefix": "../../dist",
+            "siteTitle": "Dash | Southern Winds Weyr Characters",
+            "stylesheetName": "newStyles.css"
+        })
+        <link rel="stylesheet" href="../../dist/css/gbCharacters.css" />
+    </head>
+    <body>
+        @@include('../../source/templates/nav.html', {
+            "prefix": "../.."
+        })
+        @@include('../../source/templates/characters.html', {
+            "siteSheet": "SWW",
+            "extraFilters": "FilterSpecies, FilterShippedWith",
+            "siteURL": "https://southernwindsweyr.jcink.net/",
+            "showMortality": "false",
+        })
+    </body>
+</html>

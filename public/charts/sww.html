@@ -2,12 +2,12 @@
 <html>
     <head>
         
-<title>Lux | TOTL</title>
+<title>Dash | Southern Winds Weyr Charts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!--Styles-->
-<link rel="stylesheet" href="../../dist/css/styles.css" />
-<link rel="stylesheet" href="https://luxacious11.github.io/dist/css/characters.css" />
+<link rel="stylesheet" href="../../dist/css/newStyles.css" />
+<link rel="stylesheet" href="../../dist/css/characterColors.css" />
 
 <!--Fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +45,7 @@
             </ul>
         </li>
         <li>
-            <a href="../../public/sites/gb.html">Godly Behaviour</a>
+            <a href="../../public/tracking/gb.html">Godly Behaviour</a>
             <ul>
                 <li><a href="../../public/tracking/gb.html">Threads</a></li>
                 <li><a href="../../public/tracking/gb-archived.html">Archived Threads</a></li>
@@ -54,16 +54,67 @@
             </ul>
         </li>
         <li>
-            <a href="../../public/sites/legends.html">Legends</a>
+            <a href="../../public/tracking/sww.html">Southern Winds Weyr</a>
             <ul>
-                <li><a href="../../public/tracking/legends.html">Threads</a></li>
-                <li><a href="../../public/tracking/legends-archived.html">Archived Threads</a></li>
-                <li><a href="../../public/charts/legends.html">Charts</a></li>
-                <li><a href="../../public/characters/legends.html">Characters</a></li>
+                <li><a href="../../public/tracking/sww.html">Threads</a></li>
+                <li><a href="../../public/tracking/sww-archived.html">Archived Threads</a></li>
+                <!-- <li><a href="../../public/charts/gb.html">Charts</a></li>
+                <li><a href="../../public/characters/gb.html">Characters</a></li> -->
             </ul>
         </li>
     </ul>
 </nav>
-        <section>Site Page</section>
+        <section class="tracker charts">
+    <div class="chart">
+        <b>Type of Active Threads</b>
+        <div class="chart--type chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Partners in Active Threads</b>
+        <div class="chart--partner chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Status of Non-Archived Threads</b>
+        <div class="chart--status-thread chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Status of Non-Archived Comms</b>
+        <div class="chart--status-comm chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Threads (Owing)</b>
+        <div class="chart--time-thread chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Comms (Owing)</b>
+        <div class="chart--time-comm chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Threads (Waiting)</b>
+        <div class="chart--time-thread-wait chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Comms (Waiting)</b>
+        <div class="chart--time-comm-wait chart--box"></div>
+    </div>
+
+    <script src="../../dist/js/charts.js"></script>
+    <script>
+        //set overall variables
+        let siteName = 'Southern Winds Weyr';
+
+        //set class variables
+        let $container = $('#tracker--rows');
+
+        fetch(`https://opensheet.elk.sh/${threadSheet}/Threads`)
+        .then((response) => response.json())
+        .then((threadData) => {
+            let siteThreads = threadData.filter(item => item.Site.toLowerCase().trim() === siteName.toLowerCase().trim());
+            let threads = loadThreads(siteThreads);
+
+            loadCharts(threads);
+        });
+    </script>
+</section>
     </body>
 </html>
