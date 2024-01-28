@@ -17,12 +17,21 @@
 .lux-track.gb tag-wrap,
 .lux-track.gb tag-comm,
 .lux-track.gb tag-social,
+.lux-track.gb et-wrap,
+.lux-track.gb et-comm,
+.lux-track.gb et-social,
 .lux.gb tag-wrap,
 .lux.gb tag-comm,
 .lux.gb tag-social,
+.lux.gb et-wrap,
+.lux.gb et-comm,
+.lux.gb et-social,
 .parent-9.gb tag-wrap,
 .parent-9.gb tag-comm,
-.parent-9.gb tag-social {
+.parent-9.gb tag-social,
+.parent-9.gb et-wrap,
+.parent-9.gb et-comm,
+.parent-9.gb et-social {
   --accent-20: rgba(var(--rgb), 0.2);
   --bg-color: var(--accent);
   --bg-color-transparent: var(--accent-20);
@@ -37,44 +46,80 @@
   .light .lux-track.gb tag-wrap, .light
   .lux-track.gb tag-comm, .light
   .lux-track.gb tag-social, .light
+  .lux-track.gb et-wrap, .light
+  .lux-track.gb et-comm, .light
+  .lux-track.gb et-social, .light
   .lux.gb tag-wrap, .light
   .lux.gb tag-comm, .light
   .lux.gb tag-social, .light
+  .lux.gb et-wrap, .light
+  .lux.gb et-comm, .light
+  .lux.gb et-social, .light
   .parent-9.gb tag-wrap, .light
   .parent-9.gb tag-comm, .light
-  .parent-9.gb tag-social {
+  .parent-9.gb tag-social, .light
+  .parent-9.gb et-wrap, .light
+  .parent-9.gb et-comm, .light
+  .parent-9.gb et-social {
     --accent: rgb(var(--rgb-dark, var(--rgb))); }
   body:not(.light) .lux-track.gb tag-wrap, body:not(.light)
   .lux-track.gb tag-comm, body:not(.light)
   .lux-track.gb tag-social, body:not(.light)
+  .lux-track.gb et-wrap, body:not(.light)
+  .lux-track.gb et-comm, body:not(.light)
+  .lux-track.gb et-social, body:not(.light)
   .lux.gb tag-wrap, body:not(.light)
   .lux.gb tag-comm, body:not(.light)
   .lux.gb tag-social, body:not(.light)
+  .lux.gb et-wrap, body:not(.light)
+  .lux.gb et-comm, body:not(.light)
+  .lux.gb et-social, body:not(.light)
   .parent-9.gb tag-wrap, body:not(.light)
   .parent-9.gb tag-comm, body:not(.light)
-  .parent-9.gb tag-social {
+  .parent-9.gb tag-social, body:not(.light)
+  .parent-9.gb et-wrap, body:not(.light)
+  .parent-9.gb et-comm, body:not(.light)
+  .parent-9.gb et-social {
     --accent: rgb(var(--rgb)); }
   .light .lux-track.gb tag-wrap, .light
   .lux-track.gb tag-comm, .light
   .lux-track.gb tag-social, .light
+  .lux-track.gb et-wrap, .light
+  .lux-track.gb et-comm, .light
+  .lux-track.gb et-social, .light
   .lux.gb tag-wrap, .light
   .lux.gb tag-comm, .light
   .lux.gb tag-social, .light
+  .lux.gb et-wrap, .light
+  .lux.gb et-comm, .light
+  .lux.gb et-social, .light
   .parent-9.gb tag-wrap, .light
   .parent-9.gb tag-comm, .light
-  .parent-9.gb tag-social {
+  .parent-9.gb tag-social, .light
+  .parent-9.gb et-wrap, .light
+  .parent-9.gb et-comm, .light
+  .parent-9.gb et-social {
     --accent-30: rgba(var(--rgb-dark, var(--rgb)), 0.3);
     --accent-50: rgba(var(--rgb-dark, var(--rgb)), 0.5);
     --accent-90: rgba(var(--rgb-dark, var(--rgb)), 0.8); }
   body:not(.light) .lux-track.gb tag-wrap, body:not(.light)
   .lux-track.gb tag-comm, body:not(.light)
   .lux-track.gb tag-social, body:not(.light)
+  .lux-track.gb et-wrap, body:not(.light)
+  .lux-track.gb et-comm, body:not(.light)
+  .lux-track.gb et-social, body:not(.light)
   .lux.gb tag-wrap, body:not(.light)
   .lux.gb tag-comm, body:not(.light)
   .lux.gb tag-social, body:not(.light)
+  .lux.gb et-wrap, body:not(.light)
+  .lux.gb et-comm, body:not(.light)
+  .lux.gb et-social, body:not(.light)
   .parent-9.gb tag-wrap, body:not(.light)
   .parent-9.gb tag-comm, body:not(.light)
-  .parent-9.gb tag-social {
+  .parent-9.gb tag-social, body:not(.light)
+  .parent-9.gb et-wrap, body:not(.light)
+  .parent-9.gb et-comm, body:not(.light)
+  .parent-9.gb et-social {
     --accent-30: rgba(var(--rgb), 0.3);
     --accent-50: rgba(var(--rgb), 0.5);
     --accent-90: rgba(var(--rgb), 0.8); }

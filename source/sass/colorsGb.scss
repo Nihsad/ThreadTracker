@@ -10,7 +10,10 @@
 
     &.gb tag-wrap,
     &.gb tag-comm,
-    &.gb tag-social {
+    &.gb tag-social,
+    &.gb et-wrap,
+    &.gb et-comm,
+    &.gb et-social {
         //shared
         .light & {
             --accent: rgb(var(--rgb-dark, var(--rgb)));
