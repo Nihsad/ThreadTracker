@@ -125,8 +125,11 @@
     --accent-90: rgba(var(--rgb), 0.8); }
 
 .lux-track.gb tag-image.dashpost img,
+.lux-track.gb et-image.dashpost img,
 .lux.gb tag-image.dashpost img,
-.parent-9.gb tag-image.dashpost img {
+.lux.gb et-image.dashpost img,
+.parent-9.gb tag-image.dashpost img,
+.parent-9.gb et-image.dashpost img {
   border: 0;
   overflow: hidden;
   border-radius: 3px;
@@ -284,7 +287,8 @@
 .parent-9.inoue,
 .parent-9.naoki,
 .parent-9.gb-75 {
-  --rgb: 172,216,170; }
+  --rgb: 172,216,170;
+  --rgb-dark:80, 112, 79; }
 
 .lux-track.islay, .lux-track.gb-354,
 .lux.islay,

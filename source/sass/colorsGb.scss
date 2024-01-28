@@ -49,7 +49,8 @@
         }
     }
 
-    &.gb tag-image.dashpost img {
+    &.gb tag-image.dashpost img,
+    &.gb et-image.dashpost img {
         border: 0;
   	    overflow: hidden;
   	    border-radius: 3px;
@@ -163,6 +164,7 @@
     &.naoki,
     &.gb-75 {
         --rgb: 172,216,170;
+        --rgb-dark:80, 112, 79;
     }
     
     &.islay,
