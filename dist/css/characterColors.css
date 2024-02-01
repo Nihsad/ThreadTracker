@@ -30,7 +30,8 @@
     --rgb: 202,212,115; }
   .dash-track.bryn,
   .dash.bryn {
-    --rgb: 187,34,119; }
+    --rgb: 187,34,119;
+    --rgb-dark:135,43,95; }
   .dash-track.calvin,
   .dash.calvin {
     --rgb: 112,128,144; }
@@ -68,14 +69,16 @@
   .dash-track.halsten, .dash-track.hal,
   .dash.halsten,
   .dash.hal {
-    --rgb: 120,46,54; }
+    --rgb: 166,76,86;
+    --rgb-dark: 120,46,54; }
   .dash-track.hugo,
   .dash.hugo {
     --rgb: 171,164,143; }
   .dash-track.inoue, .dash-track.naoki,
   .dash.inoue,
   .dash.naoki {
-    --rgb: 172,216,170; }
+    --rgb: 172,216,170;
+    --rgb-dark:80,112,79; }
   .dash-track.islay,
   .dash.islay {
     --rgb: 121,86,99; }
@@ -90,13 +93,15 @@
     --rgb: 247,181,56; }
   .dash-track.kit,
   .dash.kit {
-    --rgb: 253,177,113; }
+    --rgb: 253,177,113;
+    --rgb-dark: 186,122,69; }
   .dash-track.kylian,
   .dash.kylian {
     --rgb: 86,109,176; }
   .dash-track.laurie,
   .dash.laurie {
-    --rgb: 173,181,211; }
+    --rgb: 173,181,211;
+    --rgb-dark: 115,124,156; }
   .dash-track.levi, .dash-track.leviathan,
   .dash.levi,
   .dash.leviathan {

@@ -273,7 +273,8 @@
 .parent-9.halsten,
 .parent-9.hal,
 .parent-9.gb-456 {
-  --rgb: 120,46,54;
+  --rgb: 166,76,86;
+  --rgb-dark: 120,46,54;
   --img: url('https://64.media.tumblr.com/148deecfee01187574f508c2d7b2dc99/tumblr_inline_opd7q0fOFK1rifr4k_540.gif'); }
 
 .lux-track.hugo, .lux-track.gb-308,
@@ -327,7 +328,7 @@
 .parent-9.kit,
 .parent-9.gb-219 {
   --rgb: 253,177,113;
-  --rgb-dark: 150,105,66; }
+  --rgb-dark: 186,122,69; }
 
 .lux-track.kylian, .lux-track.gb-446,
 .lux.kylian,
@@ -343,6 +344,7 @@
 .parent-9.laurie,
 .parent-9.gb-278 {
   --rgb: 173,181,211;
+  --rgb-dark: 115,124,156;
   --img: url('https://64.media.tumblr.com/a2b3185be06cbb70ccffbe5c6d04a7e7/tumblr_inline_o1orrdIykw1rifr4k_500.gif'); }
 
 .lux-track.levi, .lux-track.leviathan, .lux-track.gb-410,
