@@ -13,14 +13,15 @@
     --rgb: 183,49,65; }
   .dash-track.artemisia,
   .dash.artemisia {
-    --rgb: 224,180,132; }
+    --rgb: 224,180,132;
+    --rgb-dark: 204,160,112; }
   .dash-track.asrian,
   .dash.asrian {
     --rgb: 236,176,111; }
   .dash-track.bellamy, .dash-track.bells,
   .dash.bellamy,
   .dash.bells {
-    --rgb: 148,197,7; }
+    --rgb: 154,184,68; }
   .dash-track.bgor,
   .dash.bgor {
     --rgb: 199,102,32; }
@@ -49,7 +50,8 @@
     --rgb: 29,116,222; }
   .dash-track.eliane,
   .dash.eliane {
-    --rgb: 251,189,102; }
+    --rgb: 251,189,102;
+    --rgb-dark: 199,148,78; }
   .dash-track.felix,
   .dash.felix {
     --rgb: 179,120,46; }
@@ -104,7 +106,8 @@
     --rgb: 166,146,175; }
   .dash-track.lochlann,
   .dash.lochlann {
-    --rgb: 158,204,209; }
+    --rgb: 158,204,209;
+    --rgb-dark: 104,155,161; }
   .dash-track.luciano,
   .dash.luciano {
     --rgb: 219,176,162; }
@@ -131,10 +134,11 @@
     --rgb: 143,177,202; }
   .dash-track.rhys,
   .dash.rhys {
-    --rgb: 194,93,43; }
+    --rgb: 163,44,36; }
   .dash-track.royal,
   .dash.royal {
-    --rgb: 122,223,186; }
+    --rgb: 122,223,186;
+    --rgb-dark: 83,176,142; }
   .dash-track.ryvian, .dash-track.ryv,
   .dash.ryvian,
   .dash.ryv {

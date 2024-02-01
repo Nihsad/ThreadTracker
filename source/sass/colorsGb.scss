@@ -77,13 +77,15 @@
     &.artemisia,
     &.gb-218 {
         --rgb: 224,180,132;
+        --rgb-dark: 204,160,112;
         --img: url('https://66.media.tumblr.com/6be1569258e0ba176130284872618260/9b0d5e949facfffa-7c/s540x810/9379464984d35fa76d11ad3620eb7ae5be75a9a4.gif');
     }
 
     &.bellamy,
     &.bells,
     &.gb-496 {
-        --rgb: 148,197,7;
+        --rgb: 154,184,68;
+        // --rgb:  148,197,7;
     }
     
     &.bryn,
@@ -125,6 +127,7 @@
     &.eliane,
     &.gb-296 {
         --rgb: 251,189,102;
+        --rgb-dark: 199,148,78;
     }
     
     &.felix,
@@ -221,6 +224,7 @@
     &.lochlann,
     &.gb-51 {
         --rgb: 158,204,209;
+        --rgb-dark: 104,155,161;
         --img: url('https://pbs.twimg.com/media/DZ9TwRmX0AUWxlN.jpg');
     }
     
@@ -263,13 +267,14 @@
     
     &.rhys,
     &.gb-10 {
-        --rgb: 194,93,43;
+        --rgb: 163,44,36;
         --img: url('https://64.media.tumblr.com/7817f40d8c225e5cf2759cc1ce29c83f/458ba54d4395c75e-0b/s540x810/b4a7118a51f363b56fde843cf32e3539cd2400dd.gif');
     }
     
     &.royal,
     &.gb-83 {
         --rgb: 122,223,186;
+        --rgb-dark: 83,176,142;
     }
     
     &.ryvian,
