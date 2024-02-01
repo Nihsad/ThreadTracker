@@ -67,7 +67,8 @@
   .dash-track.halsten, .dash-track.hal,
   .dash.halsten,
   .dash.hal {
-    --rgb: 120,46,54; }
+    --rgb: 166,76,86;
+    --rgb-dark: 120,46,54; }
   .dash-track.hugo,
   .dash.hugo {
     --rgb: 171,164,143; }
