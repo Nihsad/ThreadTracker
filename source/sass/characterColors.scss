@@ -20,22 +20,10 @@
         --rgb-dark: 204,160,112;
     }
 
-    &.a\'srian {
-        --rgb: 236,176,111;
-    }
-
     &.bellamy,
     &.bells {
         --rgb: 154,184,68;
-        // --rgb:  148,197,7;
-    }
-    
-    &.b\'gor {
-        --rgb: 199,102,32;
-    }
-
-    &.b\'ryn {
-        --rgb: 202,212,115;
+        // --rgb: 148,197,7;
     }
 
     &.bryn {
@@ -81,10 +69,6 @@
     &.genevieve,
     &.genny {
         --rgb: 210,134,180;
-    }
-
-    &.g\'yon {
-        --rgb: 77,24,18;
     }
 
     &.halsten,
@@ -173,10 +157,6 @@
         --rgb: 15,143,105;
     }
 
-    &[class~="n'lyse"] {
-        --rgb: 119,127,142;
-    }
-
     &.ophelia,
     &.ophie {
         --rgb: 143,177,202;
@@ -200,22 +180,9 @@
         --rgb: 96,108,56;
     }
     
-    &.teimyn {
-        --rgb: 249,35,47;
-    }
-    
     &.thalia, 
     &.lia {
         --rgb: 217,170,2;
-    }
-
-    &.thealdrae {
-        --rgb: 62,165,118;
-    }
-
-    &.vanelwynne,
-    &.wynne {
-        --rgb: 203,161,53;
     }
     
     &.wren {
@@ -225,5 +192,82 @@
     &.zoya {
         --rgb: 99,143,152;
     }
+
+    // SOUTHERN WINDS
+
+    &[class~="a'srian"] {
+        --rgb: 236,176,111;
+    }
+	
+    &[class~="b'gor"] {
+        --rgb: 199,102,32;
+    }
+
+    &[class~="b'ryn"] {
+        --rgb: 202,212,115;
+    }
+	
+	&.fearne {
+		--rgb: 162,195,76;
+	}
+		
+	&.feytach {
+		--rgb: 118,204,214;
+	}
+	
+	&[class~="g'yon"] {
+        --rgb: 77,24,18;
+    }
+	
+	&.kanestikiv,
+	&.kane {
+		--rgb: ;
+	}
+	
+	&[class~="k'eir"] {
+		--rgb: 197,175,101;
+	}
+	
+	&[class~="k'ran"] {
+		--rgb: 47,69,93;
+	}
+	
+	&[class~="k'ver"] {
+		--rgb: 175,65,83;
+	}
+	
+	&.marlevayne,
+	&.marley	{
+		--rgb: 151,168,132;
+	}
+	
+	&[class~="ne'lon"] {
+		--rgb: 48,66,39;
+	}
+	
+	&[class~="n'lyse"] {
+        --rgb: 119,127,142;
+    }
+	
+	&[class~="s'vix"] {
+		--rgb: 57,20,14;
+	}
+
+	&.teimyn {
+        --rgb: 249,35,47;
+    }
+	
+    &.thealdrae {
+        --rgb: 62,165,118;
+    }
+
+    &.vanelwynne,
+    &.wynne {
+        --rgb: 203,161,53;
+    }
+	
+	&.xydrie {
+		--rgb: 83,105,80;
+	}
 }
 
