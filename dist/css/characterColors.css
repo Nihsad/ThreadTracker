@@ -15,19 +15,10 @@
   .dash.artemisia {
     --rgb: 224,180,132;
     --rgb-dark: 204,160,112; }
-  .dash-track.asrian,
-  .dash.asrian {
-    --rgb: 236,176,111; }
   .dash-track.bellamy, .dash-track.bells,
   .dash.bellamy,
   .dash.bells {
     --rgb: 154,184,68; }
-  .dash-track.bgor,
-  .dash.bgor {
-    --rgb: 199,102,32; }
-  .dash-track.bryn-sww,
-  .dash.bryn-sww {
-    --rgb: 202,212,115; }
   .dash-track.bryn,
   .dash.bryn {
     --rgb: 187,34,119;
@@ -63,9 +54,6 @@
   .dash.genevieve,
   .dash.genny {
     --rgb: 210,134,180; }
-  .dash-track.gyon,
-  .dash.gyon {
-    --rgb: 77,24,18; }
   .dash-track.halsten, .dash-track.hal,
   .dash.halsten,
   .dash.hal {
@@ -151,13 +139,63 @@
   .dash-track.saoirse,
   .dash.saoirse {
     --rgb: 96,108,56; }
-  .dash-track.teimyn,
-  .dash.teimyn {
-    --rgb: 249,35,47; }
   .dash-track.thalia, .dash-track.lia,
   .dash.thalia,
   .dash.lia {
     --rgb: 217,170,2; }
+  .dash-track.wren,
+  .dash.wren {
+    --rgb: 166,214,176; }
+  .dash-track.zoya,
+  .dash.zoya {
+    --rgb: 99,143,152; }
+  .dash-track[class~="a'srian"],
+  .dash[class~="a'srian"] {
+    --rgb: 236,176,111; }
+  .dash-track[class~="b'gor"],
+  .dash[class~="b'gor"] {
+    --rgb: 199,102,32; }
+  .dash-track[class~="b'ryn"],
+  .dash[class~="b'ryn"] {
+    --rgb: 202,212,115; }
+  .dash-track.fearne,
+  .dash.fearne {
+    --rgb: 162,195,76; }
+  .dash-track.feytach,
+  .dash.feytach {
+    --rgb: 118,204,214; }
+  .dash-track[class~="g'yon"],
+  .dash[class~="g'yon"] {
+    --rgb: 77,24,18; }
+  .dash-track.kanestikiv, .dash-track.kane,
+  .dash.kanestikiv,
+  .dash.kane {
+    --rgb: ; }
+  .dash-track[class~="k'eir"],
+  .dash[class~="k'eir"] {
+    --rgb: 197,175,101; }
+  .dash-track[class~="k'ran"],
+  .dash[class~="k'ran"] {
+    --rgb: 47,69,93; }
+  .dash-track[class~="k'ver"],
+  .dash[class~="k'ver"] {
+    --rgb: 175,65,83; }
+  .dash-track.marlevayne, .dash-track.marley,
+  .dash.marlevayne,
+  .dash.marley {
+    --rgb: 151,168,132; }
+  .dash-track[class~="ne'lon"],
+  .dash[class~="ne'lon"] {
+    --rgb: 48,66,39; }
+  .dash-track[class~="n'lyse"],
+  .dash[class~="n'lyse"] {
+    --rgb: 119,127,142; }
+  .dash-track[class~="s'vix"],
+  .dash[class~="s'vix"] {
+    --rgb: 57,20,14; }
+  .dash-track.teimyn,
+  .dash.teimyn {
+    --rgb: 249,35,47; }
   .dash-track.thealdrae,
   .dash.thealdrae {
     --rgb: 62,165,118; }
@@ -165,9 +203,6 @@
   .dash.vanelwynne,
   .dash.wynne {
     --rgb: 203,161,53; }
-  .dash-track.wren,
-  .dash.wren {
-    --rgb: 166,214,176; }
-  .dash-track.zoya,
-  .dash.zoya {
-    --rgb: 99,143,152; }
+  .dash-track.xydrie,
+  .dash.xydrie {
+    --rgb: 83,105,80; }
