@@ -199,6 +199,10 @@
   .dash-track.thealdrae,
   .dash.thealdrae {
     --rgb: 62,165,118; }
+  .dash-track.valadrie, .dash-track.val,
+  .dash.valadrie,
+  .dash.val {
+    --rgb: 38,36,47; }
   .dash-track.vanelwynne, .dash-track.wynne,
   .dash.vanelwynne,
   .dash.wynne {
