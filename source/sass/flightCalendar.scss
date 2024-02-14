@@ -1,124 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Overlock&family=Palanquin&family=Palanquin+Dark&display=swap');
+$color_1: var(--offwhite);
+$color_2: #f5f3a9;
+$color_3: #292e28;
+$color_4: #AF4153;
+$color_5: #3e070d;
+$color_6: #d3d4ba;
+$color_7: #3ea576;
+$color_8: #4A5A1C;
+$color_9: #a6bd9f;
+$color_10: #FFCC33;
+$color_11: #1F2D17;
+$font-family_1: 'Palanquin', sans-serif;
+$background-color_1: #f0f0f0;
+$background-color_2: var(--bg-accent);
 
-$border-radius: 4px;
-$padding-x: 3px;
-
-* {
-    font-family: 'Palanquin', sans-serif;
-    box-sizing: border-box;
-}
+@import "https://fonts.googleapis.com/css2?family=Overlock&family=Palanquin&family=Palanquin+Dark&display=swap";
+/* Custom styles for specific entries */
 
 :root {
-    --border-radius: #{$border-radius};
-    --padding-x: #{$padding-x};
+	--border-radius: 4px;
+	--padding-x: 3px;
 }
-
+* {
+	font-family: $font-family_1;
+	box-sizing: border-box;
+	color: $color_1;
+}
 .month-preview {
-    border: 1px solid #ccc;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-
-    &:hover {
-        background-color: #f0f0f0;
-    }
+	border: 1px solid #ccc;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+    color: var(--dkAccent);
+    font-family: 'Palanquin Dark', sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
+	&:hover {
+		background-color: $background-color_2;
+        color: var(--offwhite);
+	}
 }
-
 .month-grid {
-    border: 1px solid #ccc;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columns for each day of the week */
-    gap: 5px;
-    padding: 10px;
-    max-width: 1000px;
-    margin: 0 auto;
-
-    .day {
-        border: 1px solid #ccc;
-        padding: 5px;
-        text-align: center;
-        min-height: 110px;
-
-        span {
-            font-weight: bold;
-            display: block;
-            width: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        &[data-style="ovalyneth"],
-        &[data-style="indreth"],
-        &[data-style="fallaith"],
-        &[data-style="jivikath"],
-        &[data-style="elayuth"],
-        &[data-style="dundavith"],
-        &[data-style="nikolyth"],
-        &[data-style="meonaith"],
-        &[data-style="oriath"],
-        &[data-style="allyseith"] {
-            padding: 0 var(--padding-x);
-            border-radius: var(--border-radius);
-        }
-
-        &[data-style="ovalyneth"] {
-            color: #f5f3a9;
-            background-image: linear-gradient(to right, #3e703d, #a2c34c);
-        }
-
-        &[data-style="indreth"] {
-            color: #292e28; 
-            background-image: linear-gradient(to right, #e6e7d5, #97a884);
-        }
-
-        &[data-style="fallaith"] {
-            color: #AF4153;
-            background-image: linear-gradient(to right, #2C1320, #2C1320);
-        }
-
-        &[data-style="jivikath"] {
-            color: #3e070d; 
-            background-image: linear-gradient(to right, #fd8891, #f9232f);
-        }
-
-        &[data-style="elayuth"] {
-            color: #d3d4ba; 
-            background-image: linear-gradient(to right, #304227, #6cac4d);
-        }
-
-        &[data-style="dundavith"] {
-            color: #3ea576; 
-            background-image: linear-gradient(to right, #111b1e, #2f4c58);
-        }
-
-        &[data-style="nikolyth"] {
-            color: #4A5A1C; 
-            background-image: linear-gradient(to right, #CAD473, #CAD473);
-        }
-
-        &[data-style="meonaith"] {
-            color: #a6bd9f; 
-            background-image: linear-gradient(to right, #536950, #536950);
-        }
-
-        &[data-style="oriath"] {
-            color: #FFCC33; 
-            background-image: linear-gradient(to right, #996515, #DAA520);
-        }
-
-        &[data-style="allyseith"] {
-            color: #1F2D17; 
-            background-image: linear-gradient(to right, #00FF8E, #68DA23);
-        }
-    }
+	border: 1px solid #ccc;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 5px;
+	padding: 10px;
+	max-width: 1200px;
+	margin: 0 auto;
 }
-
+.day {
+	border: 1px solid #ccc;
+	padding: 5px;
+	text-align: center;
+	min-height: 110px;
+	span {
+		font-weight: bold;
+		display: block;
+		width: 100%;
+		background-color: $background-color_2;
+	}
+}
 .month {
-    display: none;
-
-    &.active {
-        display: block;
-        padding: 5px;
-    }
+	display: none;
+}
+.month.active {
+	display: block;
+	padding: 5px;
+}
+[data-style="ovalyneth"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_2;
+	background-image: linear-gradient(to right, #3e703d, #a2c34c);
+}
+[data-style="indreth"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_3;
+	background-image: linear-gradient(to right, #e6e7d5, #97a884);
+}
+[data-style="fallaith"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_4;
+	background-image: linear-gradient(to right, #2C1320, #2C1320);
+}
+[data-style="jivikath"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_5;
+	background-image: linear-gradient(to right, #fd8891, #f9232f);
+}
+[data-style="elayuth"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_6;
+	background-image: linear-gradient(to right, #304227, #6cac4d);
+}
+[data-style="dundavith"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_7;
+	background-image: linear-gradient(to right, #111b1e, #2f4c58);
+}
+[data-style="nikolyth"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_8;
+	background-image: linear-gradient(to right, #CAD473, #CAD473);
+}
+[data-style="meonaith"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_9;
+	background-image: linear-gradient(to right, #536950, #536950);
+}
+[data-style="oriath"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_10;
+	background-image: linear-gradient(to right, #996515, #DAA520);
+}
+[data-style="allyseith"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: $color_11;
+	background-image: linear-gradient(to right, #00FF8E, #68DA23);
 }

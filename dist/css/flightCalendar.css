@@ -1,22 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Overlock&family=Palanquin&family=Palanquin+Dark&display=swap");
-* {
-  font-family: 'Palanquin', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
+@import "https://fonts.googleapis.com/css2?family=Overlock&family=Palanquin&family=Palanquin+Dark&display=swap";
+/* Custom styles for specific entries */
 :root {
   --border-radius: 4px;
   --padding-x: 3px; }
+
+* {
+  font-family: "Palanquin", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--offwhite); }
 
 .month-preview {
   border: 1px solid #ccc;
   padding: 10px;
   cursor: pointer;
   text-align: center;
-  max-width: 1000px;
+  color: var(--dkAccent);
+  font-family: 'Palanquin Dark', sans-serif;
+  max-width: 1200px;
   margin: 0 auto; }
   .month-preview:hover {
-    background-color: #f0f0f0; }
+    background-color: var(--bg-accent);
+    color: var(--offwhite); }
 
 .month-grid {
   border: 1px solid #ccc;
@@ -24,67 +29,95 @@
   display: grid;
   -ms-grid-columns: (1fr)[7];
   grid-template-columns: repeat(7, 1fr);
-  /* 7 columns for each day of the week */
   gap: 5px;
   padding: 10px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto; }
-  .month-grid .day {
-    border: 1px solid #ccc;
-    padding: 5px;
-    text-align: center;
-    min-height: 110px; }
-    .month-grid .day span {
-      font-weight: bold;
-      display: block;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5); }
-    .month-grid .day[data-style="ovalyneth"], .month-grid .day[data-style="indreth"], .month-grid .day[data-style="fallaith"], .month-grid .day[data-style="jivikath"], .month-grid .day[data-style="elayuth"], .month-grid .day[data-style="dundavith"], .month-grid .day[data-style="nikolyth"], .month-grid .day[data-style="meonaith"], .month-grid .day[data-style="oriath"], .month-grid .day[data-style="allyseith"] {
-      padding: 0 var(--padding-x);
-      border-radius: var(--border-radius); }
-    .month-grid .day[data-style="ovalyneth"] {
-      color: #f5f3a9;
-      background-image: -webkit-gradient(linear, left top, right top, from(#3e703d), to(#a2c34c));
-      background-image: linear-gradient(to right, #3e703d, #a2c34c); }
-    .month-grid .day[data-style="indreth"] {
-      color: #292e28;
-      background-image: -webkit-gradient(linear, left top, right top, from(#e6e7d5), to(#97a884));
-      background-image: linear-gradient(to right, #e6e7d5, #97a884); }
-    .month-grid .day[data-style="fallaith"] {
-      color: #AF4153;
-      background-image: -webkit-gradient(linear, left top, right top, from(#2C1320), to(#2C1320));
-      background-image: linear-gradient(to right, #2C1320, #2C1320); }
-    .month-grid .day[data-style="jivikath"] {
-      color: #3e070d;
-      background-image: -webkit-gradient(linear, left top, right top, from(#fd8891), to(#f9232f));
-      background-image: linear-gradient(to right, #fd8891, #f9232f); }
-    .month-grid .day[data-style="elayuth"] {
-      color: #d3d4ba;
-      background-image: -webkit-gradient(linear, left top, right top, from(#304227), to(#6cac4d));
-      background-image: linear-gradient(to right, #304227, #6cac4d); }
-    .month-grid .day[data-style="dundavith"] {
-      color: #3ea576;
-      background-image: -webkit-gradient(linear, left top, right top, from(#111b1e), to(#2f4c58));
-      background-image: linear-gradient(to right, #111b1e, #2f4c58); }
-    .month-grid .day[data-style="nikolyth"] {
-      color: #4A5A1C;
-      background-image: -webkit-gradient(linear, left top, right top, from(#CAD473), to(#CAD473));
-      background-image: linear-gradient(to right, #CAD473, #CAD473); }
-    .month-grid .day[data-style="meonaith"] {
-      color: #a6bd9f;
-      background-image: -webkit-gradient(linear, left top, right top, from(#536950), to(#536950));
-      background-image: linear-gradient(to right, #536950, #536950); }
-    .month-grid .day[data-style="oriath"] {
-      color: #FFCC33;
-      background-image: -webkit-gradient(linear, left top, right top, from(#996515), to(#DAA520));
-      background-image: linear-gradient(to right, #996515, #DAA520); }
-    .month-grid .day[data-style="allyseith"] {
-      color: #1F2D17;
-      background-image: -webkit-gradient(linear, left top, right top, from(#00FF8E), to(#68DA23));
-      background-image: linear-gradient(to right, #00FF8E, #68DA23); }
+
+.day {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+  min-height: 110px; }
+  .day span {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    background-color: var(--bg-accent); }
 
 .month {
   display: none; }
-  .month.active {
-    display: block;
-    padding: 5px; }
+
+.month.active {
+  display: block;
+  padding: 5px; }
+
+[data-style="ovalyneth"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #f5f3a9;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3e703d), to(#a2c34c));
+  background-image: linear-gradient(to right, #3e703d, #a2c34c); }
+
+[data-style="indreth"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #292e28;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e6e7d5), to(#97a884));
+  background-image: linear-gradient(to right, #e6e7d5, #97a884); }
+
+[data-style="fallaith"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #AF4153;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2C1320), to(#2C1320));
+  background-image: linear-gradient(to right, #2C1320, #2C1320); }
+
+[data-style="jivikath"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #3e070d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fd8891), to(#f9232f));
+  background-image: linear-gradient(to right, #fd8891, #f9232f); }
+
+[data-style="elayuth"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #d3d4ba;
+  background-image: -webkit-gradient(linear, left top, right top, from(#304227), to(#6cac4d));
+  background-image: linear-gradient(to right, #304227, #6cac4d); }
+
+[data-style="dundavith"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #3ea576;
+  background-image: -webkit-gradient(linear, left top, right top, from(#111b1e), to(#2f4c58));
+  background-image: linear-gradient(to right, #111b1e, #2f4c58); }
+
+[data-style="nikolyth"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #4A5A1C;
+  background-image: -webkit-gradient(linear, left top, right top, from(#CAD473), to(#CAD473));
+  background-image: linear-gradient(to right, #CAD473, #CAD473); }
+
+[data-style="meonaith"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #a6bd9f;
+  background-image: -webkit-gradient(linear, left top, right top, from(#536950), to(#536950));
+  background-image: linear-gradient(to right, #536950, #536950); }
+
+[data-style="oriath"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #FFCC33;
+  background-image: -webkit-gradient(linear, left top, right top, from(#996515), to(#DAA520));
+  background-image: linear-gradient(to right, #996515, #DAA520); }
+
+[data-style="allyseith"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #1F2D17;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00FF8E), to(#68DA23));
+  background-image: linear-gradient(to right, #00FF8E, #68DA23); }
