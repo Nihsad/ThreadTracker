@@ -41,14 +41,14 @@ class Calendar {
             monthGrid.classList.add("month-grid");
             for (let day = 1; day <= monthInfo.days; day++) {
                 const entry = this.calendarData[monthInfo.name]?.[day];
-                const dayDiv = document.createElement("div");
-                dayDiv.classList.add("day");
-
-                const dayNumber = document.createElement("span");
-                dayNumber.textContent = day;
-                dayDiv.appendChild(dayNumber);
-
                 if (entry) {
+                    const dayDiv = document.createElement("div");
+                    dayDiv.classList.add("day");
+
+                    const dayNumber = document.createElement("span");
+                    dayNumber.textContent = day;
+                    dayDiv.appendChild(dayNumber);
+
                     const { data, styles } = entry;
                     const dataPara = document.createElement("p");
                     const dataSpan = document.createElement("span");
@@ -56,6 +56,8 @@ class Calendar {
                     dataPara.appendChild(dataSpan);
                     dayDiv.appendChild(dataPara);
                     dataSpan.dataset.style = styles.join(' ');
+
+                    monthGrid.appendChild(dayDiv);
                 } else {
                     const emptyDayDiv = document.createElement("div");
                     emptyDayDiv.classList.add("day");
@@ -64,7 +66,6 @@ class Calendar {
                     emptyDayDiv.appendChild(dayNumber);
                     monthGrid.appendChild(emptyDayDiv);
                 }
-                monthGrid.appendChild(dayDiv);
             }
             monthDiv.appendChild(monthGrid);
 
