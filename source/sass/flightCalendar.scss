@@ -21,7 +21,6 @@ $background-color_2: var(--bg-accent);
 	--padding-x: 3px;
 }
 * {
-	font-family: $font-family_1;
 	box-sizing: border-box;
 	color: $color_1;
 }
@@ -40,6 +39,7 @@ $background-color_2: var(--bg-accent);
 	}
 }
 .month-grid {
+    font-family: $font-family_1;
 	border: 1px solid #ccc;
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
@@ -49,6 +49,7 @@ $background-color_2: var(--bg-accent);
 	margin: 0 auto;
 }
 .day {
+    font-family: $font-family_1;
 	border: 1px solid #ccc;
 	padding: 5px;
 	text-align: center;
@@ -62,10 +63,12 @@ $background-color_2: var(--bg-accent);
 }
 .month {
 	display: none;
+    font-family: $font-family_1;
 }
 .month.active {
 	display: block;
 	padding: 5px;
+    font-family: $font-family_1;
 }
 [data-style="ovalyneth"] {
 	padding: 0 var(--padding-x);
