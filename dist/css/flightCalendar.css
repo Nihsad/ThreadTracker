@@ -55,6 +55,13 @@
   padding: 5px;
   font-family: "Palanquin", sans-serif; }
 
+.thread--title {
+  font-family: 'Palanquin-Dark', sans-serif;
+  color: var(--dkAccent);
+  margin: 10px auto 20px;
+  text-align: center;
+  text-decoration: underline; }
+
 [data-style="ovalyneth"] {
   padding: 0 var(--padding-x);
   border-radius: var(--border-radius);
@@ -124,3 +131,17 @@
   color: #1F2D17;
   background-image: -webkit-gradient(linear, left top, right top, from(#00FF8E), to(#68DA23));
   background-image: linear-gradient(to right, #00FF8E, #68DA23); }
+
+[data-style="goldd"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #fffc00;
+  background-image: -webkit-gradient(linear, left top, right top, from(#8b7901), to(#8b7901));
+  background-image: linear-gradient(to right, #8b7901, #8b7901); }
+
+[data-style="greend"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #2ADE30;
+  background-image: -webkit-gradient(linear, left top, right top, from(#184F10), to(#184F10));
+  background-image: linear-gradient(to right, #184F10, #184F10); }

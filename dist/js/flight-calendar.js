@@ -115,6 +115,8 @@ cal.addData(8,21,"Meonaith", ["meonaith"]);
 cal.addData(8,22,"Nikolyth", ["nikolyth"]);
 cal.addData(9,11,"Indreth*", ["indreth"]);
 cal.addData(9,26,"Ovalyneth*", ["ovalyneth"]);
+cal.addData(9,11,"Orila*", ["goldd"]);
+cal.addData(04,01, "Prim", ["greend"]);
 
 // Displaying the calendar
 cal.displayCalendar();

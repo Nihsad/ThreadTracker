@@ -70,6 +70,14 @@ $background-color_2: var(--bg-accent);
 	padding: 5px;
     font-family: $font-family_1;
 }
+.thread--title {
+	font-family: 'Palanquin-Dark', sans-serif;
+	color: var(--dkAccent);
+	margin: 10px auto 20px;
+	text-align: center;
+	text-decoration: underline;
+
+}
 [data-style="ovalyneth"] {
 	padding: 0 var(--padding-x);
 	border-radius: var(--border-radius);
@@ -129,4 +137,16 @@ $background-color_2: var(--bg-accent);
 	border-radius: var(--border-radius);
 	color: $color_11;
 	background-image: linear-gradient(to right, #00FF8E, #68DA23);
+}
+[data-style="goldd"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: #fffc00;
+	background-image: linear-gradient(to right, #8b7901, #8b7901);
+}
+[data-style="greend"] {
+	padding: 0 var(--padding-x);
+	border-radius: var(--border-radius);
+	color: #2ADE30;
+	background-image: linear-gradient(to right, #184F10, #184F10);
 }
