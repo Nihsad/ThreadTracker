@@ -116,7 +116,7 @@ cal.addData(8,22,"Nikolyth", ["nikolyth"]);
 cal.addData(9,11,"Indreth*", ["indreth"]);
 cal.addData(9,26,"Ovalyneth*", ["ovalyneth"]);
 cal.addData(9,11,"Orila*", ["goldd"]);
-cal.addData(04,01, "Prim", ["greend"]);
+cal.addData(4,1, "Prim", ["greend"]);
 
 // Birthdays
 cal.addData(0,8, "S'vix", ["male"]);
