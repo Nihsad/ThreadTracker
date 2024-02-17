@@ -122,6 +122,7 @@ cal.addData(4,1, "Prim", ["greend"]);
 cal.addData(0,8, "S'vix", ["male"]);
 cal.addData(0,7, "Valadrie", ["male"]);
 cal.addData(0,30, "N'lyse", ["male"]);
+cal.addData(1,18, "Qu'lin", ["female"]);
 cal.addData(2,10, "Fearne", ["female"]);
 cal.addData(3,2, "A'srian", ["male"]);
 cal.addData(4,16, "Ne'lon", ["male"]);
