@@ -89,7 +89,7 @@ class Calendar {
 // Example usage:
 const cal = new Calendar();
 
-// Adding data to specific days
+// Flights/Runs
 cal.addData(0,2,"Elayuth", ["elayuth"]);
 cal.addData(0,17,"Nikolyth", ["nikolyth"]);
 cal.addData(1,5,"Meonaith", ["meonaith"]);
@@ -117,6 +117,28 @@ cal.addData(9,11,"Indreth*", ["indreth"]);
 cal.addData(9,26,"Ovalyneth*", ["ovalyneth"]);
 cal.addData(9,11,"Orila*", ["goldd"]);
 cal.addData(04,01, "Prim", ["greend"]);
+
+// Birthdays
+cal.addData(0,8, "S'vix", ["male"]);
+cal.addData(0,7, "Valadrie", ["male"]);
+cal.addData(0,30, "N'lyse", ["male"]);
+cal.addData(2,10, "Fearne", ["female"]);
+cal.addData(3,2, "A'srian", ["male"]);
+cal.addData(4,16, "Ne'lon", ["male"]);
+cal.addData(4,29, "B'ryn", ["male"]);
+cal.addData(4,30, "Vanelwynne", ["female"]);
+cal.addData(5,21, "Xydrie", ["female"]);
+cal.addData(5,27, "K'ran", ["male"]);
+cal.addData(6,24, "B'gor", ["male"]);
+cal.addData(6,32, "K'eir", ["male"]);
+cal.addData(7,1, "Teimyn", ["male"]);
+cal.addData(7,4, "Ellariel", ["female"]);
+cal.addData(7,13, "Kanestikiv", ["male"]);
+cal.addData(8,5, "Marlevayne", ["female"]);
+cal.addData(8,26, "G'yon", ["male"]);
+cal.addData(9,17, "Feytach", ["male"]);
+cal.addData(9,21, "K'ver", ["male"]);
+cal.addData(9,34, "Thealdrae", ["female"]);
 
 // Displaying the calendar
 cal.displayCalendar();

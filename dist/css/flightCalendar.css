@@ -145,3 +145,24 @@
   color: #2ADE30;
   background-image: -webkit-gradient(linear, left top, right top, from(#184F10), to(#184F10));
   background-image: linear-gradient(to right, #184F10, #184F10); }
+
+[data-style="female"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #c389f5;
+  background-image: -webkit-gradient(linear, left top, right top, from(#430775), to(#430775));
+  background-image: linear-gradient(to right, #430775, #430775); }
+
+[data-style="male"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #68a1f7;
+  background-image: -webkit-gradient(linear, left top, right top, from(#080554), to(#080554));
+  background-image: linear-gradient(to right, #080554, #080554); }
+
+[data-style="queer"] {
+  padding: 0 var(--padding-x);
+  border-radius: var(--border-radius);
+  color: #c389f5;
+  background-image: -webkit-gradient(linear, left top, right top, from(#430775), to(#080554));
+  background-image: linear-gradient(to right, #430775, #080554); }
