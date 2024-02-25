@@ -190,6 +190,9 @@
   .dash-track[class~="n'lyse"],
   .dash[class~="n'lyse"] {
     --rgb: 119,127,142; }
+  .dash-track[class~="qu'lin"],
+  .dash[class~="qu'lin"] {
+    --rgb: 195,91,103; }
   .dash-track[class~="s'vix"],
   .dash[class~="s'vix"] {
     --rgb: 57,20,14; }
