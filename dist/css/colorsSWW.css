@@ -74,8 +74,8 @@
     --grad-b: ; }
   .dash-track.valadrie, .dash-track.val {
     --rgb: 38,36,47;
-    --grad-a: ;
-    --grad-b: ; }
+    --grad-a: 38,36,47;
+    --grad-b: 68,77,86; }
   .dash-track.vanelwynne, .dash-track.wynne {
     --rgb: 203,161,53;
     --grad-a: ;
