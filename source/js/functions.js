@@ -373,8 +373,20 @@ function populateThreads(array, siteObject) {
 
     //Append filters
     characters.forEach(character => {
-        document.querySelector('.tracker--characters').insertAdjacentHTML('beforeend', `<label><input type="checkbox" value=".${character.split(' ')[0].toLowerCase()}"/>${character.split(' ')[0].toLowerCase()} ${character.split(' ')[1][0].toLowerCase()}.</label>`);
+        // Split the character name at spaces
+        const parts = character.split(' ');
+        // Check if there's more than one part in the name
+        if (parts.length > 1) {
+            // Construct the abbreviated name
+            const abbreviatedName = parts[0].toLowerCase() + ' ' + parts[1][0].toLowerCase() + '.';
+            // Construct the label with checkbox and insert it
+            document.querySelector('.tracker--characters').insertAdjacentHTML('beforeend', `<label><input type="checkbox" value=".${parts[0].toLowerCase()}"/>${abbreviatedName}</label>`);
+        } else {
+            // If there's only one part, just insert it as is
+            document.querySelector('.tracker--characters').insertAdjacentHTML('beforeend', `<label><input type="checkbox" value=".${character.toLowerCase()}"/>${character}</label>`);
+        }
     });
+    
     partners.forEach(partner => {
         document.querySelector('.tracker--partners').insertAdjacentHTML('beforeend', `<label><input type="checkbox" value=".partner--${partner.replaceAll(' ', '').toLowerCase().trim()}"/>${partner}</label>`);
     });

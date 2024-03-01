@@ -16,6 +16,10 @@
     --rgb: 74,90,28;
     --grad-a: 202,212,115;
     --grad-b: 74,90,28; }
+  .dash-track.ellariel {
+    --rgb: ;
+    --grad-a: 200,124,149;
+    --grad-b: 133,88,113; }
   .dash-track.fearne {
     --rgb: 62,112,61;
     --grad-a: 62,112,61;
@@ -29,9 +33,9 @@
     --grad-a: 77,24,18;
     --grad-b: 184,135,58; }
   .dash-track.kanestikiv, .dash-track.kane {
-    --rgb: ;
-    --grad-a: ;
-    --grad-b: ; }
+    --rgb: 90,0,0;
+    --grad-a: 90,0,0;
+    --grad-b: 166,124,0; }
   .dash-track[class~="k'eir"] {
     --rgb: 19,11,15;
     --grad-a: 19,11,15;

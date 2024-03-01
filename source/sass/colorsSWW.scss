@@ -28,6 +28,12 @@
         --grad-b: 74,90,28;
     }
 
+    &.ellariel {
+        --rgb: ;
+        --grad-a: 200,124,149;
+        --grad-b: 133,88,113;
+    }
+
     &.fearne {
         --rgb: 62,112,61;
         --grad-a: 62,112,61;
@@ -48,9 +54,9 @@
 
     &.kanestikiv,
     &.kane {
-        --rgb: ;
-        --grad-a: ;
-        --grad-b: ;
+        --rgb: 90,0,0;
+        --grad-a: 90,0,0;
+        --grad-b: 166,124,0;
     }
 
     &[class~="k'eir"] {
