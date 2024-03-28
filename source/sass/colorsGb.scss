@@ -49,12 +49,15 @@
         }
     }
 
-    &.gb tag-image.dashpost img,
-    &.gb et-image.dashpost img {
+    &.gb tag-image.dashpost img {
         border: 0;
   	    overflow: hidden;
   	    border-radius: 3px;
 	    content: var(--img);
+    }
+
+    &.gb et-image.dashpost img {
+        content: var(--img);
     }
     
     &.ailbhe,
@@ -269,7 +272,8 @@
     
     &.rhys,
     &.gb-10 {
-        --rgb: 163,44,36;
+        --rgb-dark: 163,44,36;
+        --rgb: 163,49,42;
         --img: url('https://64.media.tumblr.com/7817f40d8c225e5cf2759cc1ce29c83f/458ba54d4395c75e-0b/s540x810/b4a7118a51f363b56fde843cf32e3539cd2400dd.gif');
     }
     

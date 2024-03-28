@@ -125,14 +125,16 @@
     --accent-90: rgba(var(--rgb), 0.8); }
 
 .lux-track.gb tag-image.dashpost img,
-.lux-track.gb et-image.dashpost img,
 .lux.gb tag-image.dashpost img,
-.lux.gb et-image.dashpost img,
-.parent-9.gb tag-image.dashpost img,
-.parent-9.gb et-image.dashpost img {
+.parent-9.gb tag-image.dashpost img {
   border: 0;
   overflow: hidden;
   border-radius: 3px;
+  content: var(--img); }
+
+.lux-track.gb et-image.dashpost img,
+.lux.gb et-image.dashpost img,
+.parent-9.gb et-image.dashpost img {
   content: var(--img); }
 
 .lux-track.ailbhe, .lux-track.gb-241,
@@ -427,7 +429,8 @@
 .lux.gb-10,
 .parent-9.rhys,
 .parent-9.gb-10 {
-  --rgb: 163,44,36;
+  --rgb-dark: 163,44,36;
+  --rgb: 163,49,42;
   --img: url('https://64.media.tumblr.com/7817f40d8c225e5cf2759cc1ce29c83f/458ba54d4395c75e-0b/s540x810/b4a7118a51f363b56fde843cf32e3539cd2400dd.gif'); }
 
 .lux-track.royal, .lux-track.gb-83,
