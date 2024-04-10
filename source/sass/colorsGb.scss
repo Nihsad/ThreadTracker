@@ -208,6 +208,7 @@
     &.gb-219 {
         --rgb: 253,177,113;
         --rgb-dark: 186,122,69;
+        --img: url('https://64.media.tumblr.com/9814e9f30ad976f5b4fb76dbcf230fbe/tumblr_inline_ok7ixcJv8j1qlt39u_400.gif');
     }
     
     &.kylian,
@@ -221,6 +222,13 @@
         --rgb: 173,181,211;
         --rgb-dark: 115,124,156;
         --img: url('https://64.media.tumblr.com/a2b3185be06cbb70ccffbe5c6d04a7e7/tumblr_inline_o1orrdIykw1rifr4k_500.gif');
+    }
+
+    &.lazar,
+    &.gb-696 {
+        --rgb: 74,69,34;
+        --rgb-dark: 125,121,72;
+        --img: url('https://64.media.tumblr.com/add210e36394568d9eefa0ca459c1fe6/tumblr_inline_nreqbnELp61qlt39u_250.gifv');
     }
     
     &.levi,
