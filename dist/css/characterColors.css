@@ -90,6 +90,9 @@
   .dash.laurie {
     --rgb: 173,181,211;
     --rgb-dark: 115,124,156; }
+  .dash-track.lazar,
+  .dash.lazar {
+    --rgb: ; }
   .dash-track.levi, .dash-track.leviathan,
   .dash.levi,
   .dash.leviathan {
@@ -113,6 +116,9 @@
   .dash-track.max,
   .dash.max {
     --rgb: 63,201,194; }
+  .dash-track.micah,
+  .dash.micah {
+    --rgb: 111,30,91; }
   .dash-track.michalis, .dash-track.mik,
   .dash.michalis,
   .dash.mik {
