@@ -105,7 +105,11 @@ function getDelay(date) {
     }
     return delayClass;
 }
-function formatThread(site, siteURL, status, character, feature, title, threadID, icDate, partnerObjects, type, lastPost, delayClass, directoryString, snippet) {
+function formatThread(site, siteURL, status, character, feature, title, threadID, icDate, partnerObjects, type, lastPost, delayClass, directoryString, snippet, tags) {
+    //set tags
+    let tagClasses = tags && tags !== '' ? tags.split(' ').map(tag => `tag--${tag}`).join(' ') : '';
+    console.log(tagClasses);
+
     //set writing partners
     let partners = ``;
     let partnerClasses = ``;
@@ -158,7 +162,7 @@ function formatThread(site, siteURL, status, character, feature, title, threadID
     } else {
         buttons = `<div class="icon" title="${type}"></div>`;
     }
-    let html = `<div class="thread dash-track grid-item status--${status} ${character.split(' ')[0].toLowerCase()} delay--${delayClass} type--${type.split(' ')[0]} ${partnerClasses} ${ftClasses} grid-item">
+    let html = `<div class="thread dash-track grid-item status--${status} ${character.split(' ')[0].toLowerCase()} delay--${delayClass} type--${type.split(' ')[0]} ${tagClasses} ${partnerClasses} ${ftClasses} grid-item">
         <div class="thread--wrap">
             <div class="thread--main">
                 <a href="${siteURL}/?showtopic=${threadID}&view=getnewpost" target="_blank" class="thread--title">${title}</a>
@@ -281,6 +285,13 @@ function addThread(e) {
         update = `${month} ${day}, ${year}`,
         snippet = e.currentTarget.querySelector('#description').value ? e.currentTarget.querySelector('#description').value : '';
 
+        let tagsField = e.currentTarget.querySelector('#tags');
+        let tags = Array.from(tagsField.options).filter(function (option) {
+            return option.selected;
+        }).map(function (option) {
+            return option.value;
+        });
+
         let partners = document.querySelectorAll('.partner select');
         let partnerObjects = [];
         partners.forEach(partnerObj => {
@@ -315,7 +326,8 @@ function addThread(e) {
         'Partner': partner,
         'Type': type,
         'LastUpdated': update,
-        'Snippet': snippet
+        'Snippet': snippet,
+        'Tags': tags.join(' ')
     }, null, threadDeploy, e);
 }
 function populateThreads(array, siteObject) {
@@ -360,7 +372,8 @@ function populateThreads(array, siteObject) {
                             array[i].LastUpdated.toLowerCase(),
                             getDelay(array[i].LastUpdated),
                             siteObject.Directory,
-                            array[i].Snippet);
+                            array[i].Snippet),
+                            array[i].Tags;
     }
     document.querySelector('#tracker--rows').insertAdjacentHTML('beforeend', html);
 
@@ -1014,4 +1027,13 @@ function openModalProfile(e) {
 function closeModalProfile(e) {
     document.querySelectorAll('.character--modal').forEach(modal => modal.classList.remove('is-open'));
     document.querySelector('body').classList.remove('modal-open');
+
+}
+function toggleActive(e) {
+    e.parentNode.parentNode.childNodes.forEach(item => {
+        if(item !== e.parentNode && item.classList) {
+            item.querySelectorAll('.is-active').forEach(el => el.classList.remove('is-active'));
+        }
+    });
+    e.nextElementSibling.classList.toggle('is-active');
 }

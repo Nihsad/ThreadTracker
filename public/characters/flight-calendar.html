@@ -38,7 +38,7 @@
         <nav>
     <ul>
         <li>
-            <a href="../../public/index.html" class="highlight"><i class="fa-solid fa-plus"></i> Add</a>
+            <button class="highlight" onClick="toggleActive(this)"><i class="fa-solid fa-plus"></i> Add</button>
             <ul>
                 <li><a href="../../public/forms/thread.html">Add a Thread</a></li>
                 <li><a href="../../public/forms/site.html">Add a Site</a></li>
@@ -47,22 +47,27 @@
             </ul>
         </li>
         <li>
-            <a href="../../public/tracking/gb.html">Godly Behaviour</a>
+            <button onClick="toggleActive(this)">Active</button>
             <ul>
-                <li><a href="../../public/tracking/gb.html">Threads</a></li>
-                <li><a href="../../public/tracking/gb-archived.html">Archived Threads</a></li>
-                <li><a href="../../public/charts/gb.html">Charts</a></li>
-                <li><a href="../../public/characters/gb.html">Characters</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="../../public/tracking/sww.html">Southern Winds Weyr</a>
-            <ul>
-                <li><a href="../../public/tracking/sww.html">Threads</a></li>
-                <li><a href="../../public/tracking/sww-archived.html">Archived Threads</a></li>
-                <li><a href="../../public/charts/sww.html">Charts</a></li>
-                <li><a href="../../public/characters/sww.html">Characters</a></li>
-                <li><a href="../../public/characters/flight-calendar.html">Flight Calendar</a></li>
+                <li>
+                    <button onClick="toggleActive(this)">Godly Behaviour</button>
+                    <ul>
+                        <li><a href="../../public/tracking/gb.html">Threads</a></li>
+                        <li><a href="../../public/tracking/gb-archived.html">Archives</a></li>
+                        <li><a href="../../public/charts/gb.html">Charts</a></li>
+                        <li><a href="../../public/characters/gb.html">Characters</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button onClick="toggleActive(this)">Southern Winds Weyr</button>
+                    <ul>
+                        <li><a href="../../public/tracking/sww.html">Threads</a></li>
+                        <li><a href="../../public/tracking/sww-archived.html">Archived Threads</a></li>
+                        <li><a href="../../public/charts/sww.html">Charts</a></li>
+                        <li><a href="../../public/characters/sww.html">Characters</a></li>
+                        <li><a href="../../public/characters/flight-calendar.html">Flight Calendar</a></li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>

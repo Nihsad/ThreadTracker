@@ -59,20 +59,26 @@ nav {
     color: var(--text-on-accent);
     background: var(--bg-accent);
     z-index: 100;
-    text-transform: uppercase;
-    font-size: 10px;
-    letter-spacing: 0.1em;
+    
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--border-main);
 
-    a {
+    a,
+    button {
+        background: none;
+        border: none;
         color: var(--text-on-accent);
         font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 8px 10px;
+        border-radius: 2px;
 
         &.highlight {
             background: var(--bg-body);
-            padding: 8px 10px;
             border-radius: 2px;
             color: var(--text-body);
             border: none;
@@ -92,46 +98,96 @@ nav {
         margin: 0;
         padding: 0;
 
-        li {
+        & > li {
+
+            &:hover,
+            &:has(.is-active) {
+                background: var(--bg-accent-alt);
+            }
+
             & > ul {
                 display: none;
                 flex-direction: column;
                 position: absolute;
                 list-style-type: none;
-                padding: 10px 0;
+                padding: 0;
                 margin: 0;
                 width: 200px;
                 background: var(--bg-accent);
                 flex-wrap: wrap;
-                gap: 5px;
+                z-index: -1;
 
-                &:hover {
+                &.is-active {
                     display: flex;
                 }
 
                 & > li {
-                    &:first-child {
-                        border-top: 1px solid var(--text-on-accent);
-                        padding-top: 5px;
+                    padding: 10px;
+                    border: 1px solid var(--text-on-accent);
+
+                    &:not(:last-child) {
+                        border-bottom: none;
                     }
-                    a {
+
+                    &:hover,
+                    &:has(.is-active) {
+                        background: var(--bg-accent-alt);
+                    }
+                    
+                    a,
+                    button {
                         display: block;
-                        background: var(--accent);
                         border-radius: 10px;
                         padding: 5px 10px;
                         font-weight: 400;
                         font-family: var(--font-body);
+                        width: 100%;
+                        text-align: left;
 
-                        &:hover {
-                            border: none;
-                            padding: 5px 10px 5px 15px;
+                        &:not(:only-child) {
+                            &::after {
+                                content: '\f054';
+                                font-family: 'Font Awesome 6 Pro';
+                                font-weight: 700;
+                                font-style: normal;
+                                position: absolute;
+                                right: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    & > ul {
+                        display: none;
+                        position: absolute;
+                        top: -1px;
+                        right: 1px;
+                        transform: translateX(100%);
+                        background: var(--accent);
+                        list-style: none;
+                        margin: 0;
+                        padding: 10px 0;
+                        z-index: 1;
+                        flex-direction: column;
+                        width: 200px;
+                        flex-wrap: wrap;
+                        border: 1px solid var(--text-on-accent);
+
+                        &:not(:last-child) {
+                            border-bottom: none;
+                        }
+
+                        &.is-active {
+                            display: flex;
+                        }
+
+                        a {
+                            &:hover {
+                                padding: 5px 10px 5px 15px;
+                            }
                         }
                     }
                 }
-            }
-
-            &:hover > ul {
-                display: flex;
             }
         }
     }
@@ -552,6 +608,11 @@ section {
         &-group {
             display: flex;
             flex-direction: column;
+
+                hr {
+                    width: 100%;
+                    margin: 5px 0 10px;
+                }
         }
     }
     &--content {
