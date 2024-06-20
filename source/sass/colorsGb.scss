@@ -85,14 +85,6 @@
         --rgb-dark: 204,160,112;
         --img: url('https://66.media.tumblr.com/6be1569258e0ba176130284872618260/9b0d5e949facfffa-7c/s540x810/9379464984d35fa76d11ad3620eb7ae5be75a9a4.gif');
     }
-
-    &.bellamy,
-    &.bells,
-    &.gb-496 {
-        --rgb: 154,184,68;
-        // --rgb:  148,197,7;
-        --img: url('https://s11.gifyu.com/images/SgWHB.gif');
-    }
     
     &.bryn,
     &.gb-135 {
@@ -305,6 +297,12 @@
     &.ophie,
     &.gb-499 {
         --rgb: 143,177,202;
+    }
+
+    &.rhee,
+    &.gb-496 {
+        --rgb: 177,83,10;
+        --img: url('https://64.media.tumblr.com/18aab154f2e129a721f32bfbf773193b/c3e191644dd03183-cd/s540x810/67e305613361893315863403e83dae6d163d9323.gif');
     }
     
     &.rhys,
