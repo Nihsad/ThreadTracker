@@ -372,8 +372,8 @@ function populateThreads(array, siteObject) {
                             array[i].LastUpdated.toLowerCase(),
                             getDelay(array[i].LastUpdated),
                             siteObject.Directory,
-                            array[i].Snippet),
-                            array[i].Tags;
+                            array[i].Snippet,
+                            array[i].Tags);
     }
     document.querySelector('#tracker--rows').insertAdjacentHTML('beforeend', html);
 
