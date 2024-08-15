@@ -47,6 +47,11 @@
   .dash-track.felix,
   .dash.felix {
     --rgb: 179,120,46; }
+  .dash-track.feng, .dash-track.xiulan,
+  .dash.feng,
+  .dash.xiulan {
+    --rgb-dark: 162, 126, 121;
+    --rgb: 249, 237, 189; }
   .dash-track.finore,
   .dash.finore {
     --rgb: 119,64,96; }
