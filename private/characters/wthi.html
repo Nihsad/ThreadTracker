@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../source/templates/head.html', {
+            "prefix": "../../dist",
+            "siteTitle": "Dash | Where the Hell Is Characters",
+            "stylesheetName": "newStyles.css"
+        })
+        <link rel="stylesheet" href="../../dist/css/wthiCharacters.css" />
+    </head>
+    <body>
+        @@include('../../source/templates/nav.html', {
+            "prefix": "../.."
+        })
+        @@include('../../source/templates/characters.html', {
+            "siteSheet": "WTHI",
+            "extraFilters": "FilterShippedWith",
+            "siteURL": "https://wherethehellis.jcink.net/",
+            "showMortality": "true",
+        })
+    </body>
+</html>

@@ -2,7 +2,7 @@
 <html>
     <head>
         
-<title>Dash | Southern Winds Weyr Flight Calendar</title>
+<title>Dash | Where the Hell Is Charts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!--Styles-->
@@ -31,8 +31,6 @@
 
 <!--Scripts-->
 <script type='text/javascript' src='../../dist/js/functions.js'></script>
-        <link rel="stylesheet" href="../../dist/css/gbCharacters.css" />
-        <link rel="stylesheet" href="../../dist/css/flightCalendar.css" />
     </head>
     <body>
         <nav>
@@ -81,10 +79,57 @@
         </li>
     </ul>
 </nav>
-        <h2 class="thread--title">Flight Calendar</h2>
-        <div id="miniature-calendar"></div>
-        <div id="calendar"></div>
+        <section class="tracker charts">
+    <div class="chart">
+        <b>Type of Active Threads</b>
+        <div class="chart--type chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Partners in Active Threads</b>
+        <div class="chart--partner chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Status of Non-Archived Threads</b>
+        <div class="chart--status-thread chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Status of Non-Archived Comms</b>
+        <div class="chart--status-comm chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Threads (Owing)</b>
+        <div class="chart--time-thread chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Comms (Owing)</b>
+        <div class="chart--time-comm chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Threads (Waiting)</b>
+        <div class="chart--time-thread-wait chart--box"></div>
+    </div>
+    <div class="chart">
+        <b>Last Reply in Active Comms (Waiting)</b>
+        <div class="chart--time-comm-wait chart--box"></div>
+    </div>
 
-        <script src="../../dist/js/flight-calendar.js"></script>
+    <script src="../../dist/js/charts.js"></script>
+    <script>
+        //set overall variables
+        let siteName = 'Where the Hell Is';
+
+        //set class variables
+        let $container = $('#tracker--rows');
+
+        fetch(`https://opensheet.elk.sh/${threadSheet}/Threads`)
+        .then((response) => response.json())
+        .then((threadData) => {
+            let siteThreads = threadData.filter(item => item.Site.toLowerCase().trim() === siteName.toLowerCase().trim());
+            let threads = loadThreads(siteThreads);
+
+            loadCharts(threads);
+        });
+    </script>
+</section>
     </body>
 </html>

@@ -108,7 +108,6 @@ function getDelay(date) {
 function formatThread(site, siteURL, status, character, feature, title, threadID, icDate, partnerObjects, type, lastPost, delayClass, directoryString, snippet, tags) {
     //set tags
     let tagClasses = tags && tags !== '' ? tags.split(' ').map(tag => `tag--${tag}`).join(' ') : '';
-    console.log(tagClasses);
 
     //set writing partners
     let partners = ``;
@@ -343,17 +342,17 @@ function populateThreads(array, siteObject) {
             featureObjects = array[i].Featuring.split('+').map(featured => JSON.parse(featured));
         }
 
-        if(jQuery.inArray(character, characters) == -1 && character != '') {
+        if(jQuery.inArray(character, characters) == -1 && character != '' && array[i].Status.toLowerCase() !== 'complete') {
             characters.push(character);
         }
         partnerObjects.forEach(partner => {
-            if(jQuery.inArray(partner.partner, partners) == -1 && partner.partner != '') {
+            if(jQuery.inArray(partner.partner, partners) == -1 && partner.partner != '' && array[i].Status.toLowerCase() !== 'complete') {
                 partners.push(partner.partner);
             }
         });
         if(featureObjects) {
             featureObjects.forEach(featured => {
-                if(jQuery.inArray(featured.character, featuring) == -1 && featured.character != '') {
+                if(jQuery.inArray(featured.character, featuring) == -1 && featured.character != '' && array[i].Status.toLowerCase() !== 'complete') {
                     featuring.push(featured.character);
                 }
             });
