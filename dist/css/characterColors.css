@@ -98,6 +98,9 @@
   .dash.laurie {
     --rgb: 173,181,211;
     --rgb-dark: 115,124,156; }
+  .dash-track.laylah,
+  .dash.laylah {
+    --rgb: 135,32,85; }
   .dash-track.lazar,
   .dash.lazar {
     --rgb: 74,69,34; }

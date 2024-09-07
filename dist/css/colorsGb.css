@@ -366,6 +366,14 @@
   --rgb-dark: 115,124,156;
   --img: url('https://64.media.tumblr.com/a2b3185be06cbb70ccffbe5c6d04a7e7/tumblr_inline_o1orrdIykw1rifr4k_500.gif'); }
 
+.lux-track.laylah, .lux-track.gb-499,
+.lux.laylah,
+.lux.gb-499,
+.parent-9.laylah,
+.parent-9.gb-499 {
+  --rgb: 135,32,85;
+  --img: url('https://64.media.tumblr.com/bd0255c1323b0d6383d52d188d8ba085/3bd7d79f3cd0eafd-f9/s540x810/4a82f38870fd0e5a8be4b3a8a6e7766331db5472.gif'); }
+
 .lux-track.lazar, .lux-track.gb-696,
 .lux.lazar,
 .lux.gb-696,
