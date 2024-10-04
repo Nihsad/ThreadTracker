@@ -430,6 +430,15 @@
 .parent-9.gb-141 {
   --rgb: 216,97,38; }
 
+.lux-track.magdalene, .lux-track.gb-919,
+.lux.magdalene,
+.lux.gb-919,
+.parent-9.magdalene,
+.parent-9.gb-919 {
+  --rgb: 177, 209, 75;
+  --rgb-dark: 166, 171, 62;
+  --img: url('https://64.media.tumblr.com/6a6c4b521528acb25a1e7deeb1a88b42/b503a38daf93c9b6-64/s540x810/1b87c09599b0c00c2fdeb4837d1afa3e69cf74de.gif'); }
+
 .lux-track.max,
 .lux.max,
 .parent-9.max {

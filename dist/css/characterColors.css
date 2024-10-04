@@ -124,6 +124,11 @@
   .dash-track.magalie,
   .dash.magalie {
     --rgb: 216,97,38; }
+  .dash-track.magdalene, .dash-track.magda,
+  .dash.magdalene,
+  .dash.magda {
+    --rgb: 177, 209, 75;
+    --rgb-dark: 166, 171, 62; }
   .dash-track.max,
   .dash.max {
     --rgb: 63,201,194; }
