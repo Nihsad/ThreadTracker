@@ -58,12 +58,16 @@
   .dash-track.finore,
   .dash.finore {
     --rgb: 119,64,96; }
+  .dash-track.gabriel, .dash-track.gabe,
+  .dash.gabriel,
+  .dash.gabe {
+    --rgb: 165,107,59; }
   .dash-track.georgina,
   .dash.georgina {
     --rgb: 241,129,128; }
-  .dash-track.genevieve, .dash-track.genny,
+  .dash-track.genevieve, .dash-track.evie,
   .dash.genevieve,
-  .dash.genny {
+  .dash.evie {
     --rgb: 210,134,180; }
   .dash-track.halsten, .dash-track.hal,
   .dash.halsten,

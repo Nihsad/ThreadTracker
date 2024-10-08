@@ -267,6 +267,14 @@
   --rgb: 119,64,96;
   --img: url('https://64.media.tumblr.com/5f6d8919b3a90e100cb97b406d4e2d07/594cf9662bb24eff-9d/s540x810/bc40e7eee9f4a6d3d44277cec7879f8423a806e8.gif'); }
 
+.lux-track.gabriel, .lux-track.gb-922,
+.lux.gabriel,
+.lux.gb-922,
+.parent-9.gabriel,
+.parent-9.gb-922 {
+  --rgb: 165,107,59;
+  --img: url('https://64.media.tumblr.com/8f4b62e766f290a1c90658273cbaf52a/aabfd2f466814a70-68/s250x400/48db4ef773ba405c49a51183dd908e3be1142792.gif'); }
+
 .lux-track.georgina, .lux-track.gb-48,
 .lux.georgina,
 .lux.gb-48,
